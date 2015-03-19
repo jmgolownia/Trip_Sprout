@@ -9157,4 +9157,59 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-@impoty "overrides";
+/* line 4, ../scss/_overrides.scss */
+.hero-background {
+  height: 700px;
+  background-image: url("../images/japan.png");
+  background-size: cover;
+}
+/* line 9, ../scss/_overrides.scss */
+.hero-background .navbar {
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.69);
+}
+/* line 13, ../scss/_overrides.scss */
+.hero-background ul {
+  display: inline;
+  list-style: none;
+  margin-top: 50px;
+}
+/* line 18, ../scss/_overrides.scss */
+.hero-background ul li {
+  text-align: center;
+  display: inline;
+  font: "Lato";
+  font-size: 16px;
+  padding-right: 20px;
+}
+/* line 27, ../scss/_overrides.scss */
+.hero-background .hero h1 {
+  font: "Lato";
+  color: #fff;
+  text-align: center;
+  margin-top: 200px;
+  padding-left: -100px;
+}
+/* line 34, ../scss/_overrides.scss */
+.hero-background .hero h3 {
+  font: "Lato";
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* line 44, ../scss/_overrides.scss */
+.nav-left {
+  margin-top: 35px;
+}
+
+/* line 48, ../scss/_overrides.scss */
+.nav-center {
+  margin-top: 10px;
+}
+
+/* line 52, ../scss/_overrides.scss */
+.nav-right {
+  margin-top: 30px;
+}
