@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
+    <title>TripSprout</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
   <!--Header Section-->
-  <div class="hero-background row">
-    <div class="large-12 columns">
-      <!--Navigation Bar-->
-      <div class="navbar row">
+  <section class="hero-background">
+    <div class="navbar">
+      <!--Navigation Bar Content-->
+      <div class="row">
         <div class="large-4 columns nav-left">
           <ul>
             <li>Search</li>
@@ -27,12 +27,13 @@
         <div class="large-4 columns nav-right">
           <ul>
             <li>My Account</li>
-            <li><a href="#" class="button small">Teachers Start Here</a></li>
+            <li><a href="#" class="small button">Teachers Start Here</a></li>
           </ul>
         </div>
       </div>
-      <!--Hero Text and Call to Actions-->
-      <div class="hero row">
+    </div>
+    <!--Hero Text and Call to Actions-->
+    <div class="hero row">
         <div class="large-12 columns">
           <div class="large-12 columns">
             <h1>"One's destination is never a place, but a new way of seeing things."</h1>
@@ -41,20 +42,22 @@
             <h3>TripSprout connects teachers and donors together to deliver travel experiences that open the world to any student anywhere.</h3>
           </div>
           <div class="text-center">
-            <a href="#" class="button">See How it Works</a>
-            <a href="#" class="button">Search and Donate</a>
+            <a href="#" class="cta-works button">See How it Works</a>
+            <a href="#" class="cta-search button">Search and Donate</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-    <!--Search Bar-->
+  <!--Search and Donate Section-->
+  <section class="search-donate">
     <div class="row">
       <div class="large-12 columns">
         <h2>Sprout an amazing experience for students today</h2>
       </div>
     </div>
+     <!--Search Bar-->
     <div class="row">
       <div class="large-8 columns large-offset-2 columns">
         <div class="row collapse">
@@ -67,19 +70,47 @@
         </div>
       </div>
     </div>
-    <!--Latest Trips Posted Slider-->
+    <!--Latest Trips Posted-->
     <div class="row">
       <div class="large-12 columns">
         <h4>Recent trips posted by Teachers</h4>
       </div>
     </div>
-    <div class="row">
-      <div class="large-8 columns">
-        <ul class="small-block-grid-3">
-          <li><img src="images/capitol.png">Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class already has our trip created, we just need… READ MORE></li>
-          <li><img src="images/capitol.png"></li>
-          <li><img src="images/capitol.png"></li>
-        </ul>
+    <div class="recent row">
+      <div class="large-12 columns">
+        <div class="large-4 columns">
+          <div class="post-title">
+            <h5>Mr. Rodriguez Grade 8</h5>
+          </div>
+          <div class="caption post-1">
+            <h6>Complete our simulation with a visit to Capitol Hill</h6>
+          </div>
+          <div class="post-description">
+            <p>Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class already has our trip created, we just need… READ MORE></p>
+          </div>
+        </div>
+        <div class="large-4 columns">
+          <div class="post-title">
+            <h5>Mr. Rodriguez Grade 8</h5>
+          </div>
+          <div class="caption post-2">
+            <h6>Our choir needs to get to a national competition in NYC!</h6>
+          </div>
+          <div class="post-description">
+            <p>Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class already has our trip created, we just need… READ MORE></p>
+          </div>
+        </div>
+        <div class="large-4 columns">
+          <div class="post-title">
+            <h5>Mr. Rodriguez Grade 8</h5>
+          </div>
+          <div class="caption post-3">
+            <h6>Exploring ancient cultures of China and Japan this summer</h6>
+          </div>
+          <div class="post-description">
+            <p>Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class already has our trip created, we just need… READ MORE></p>
+          </div>
+        </div>
       </div>
     </div>
     <!--Search Options-->
@@ -89,15 +120,22 @@
       </div>
     </div>
     <div class="row">
-      <div class="large-8 columns large-offset-2 columns">
-        <ul class="button-group even-3">
-          <li><a href="#" class="button">State / National Travel</a></li>
-          <li><a href="#" class="button">International Travel</a></li>
-          <li><a href="#" class="button">Teacher Proposals Near Me</a></li>
-        </ul>
+      <div class="large-12 columns">
+        <div class="large-4 columns">
+          <a href="#"><h5 class="category state">State and National Trips</h5></a>
+        </div>
+        <div class="large-4 columns">
+          <a href="#"><h5 class="category international">International Trips</h5></a>
+        </div>
+        <div class="large-4 columns">
+          <a href="#"><h5 class="category local">Teacher Proposals Near Me</h5></a>
+        </div>
       </div>
     </div>
-    <!--Donations / Contributions Summary-->
+  </section>
+  
+  <!--Donations / Contributions Summary-->
+  <section class="donations-info">
     <div class="row">
       <div class="large-12 columns">
         <h2>See what your donations have sprouted</h2>
@@ -108,17 +146,19 @@
       </div>
       <div class="large-4 columns">
         <h4>$2,314,630</h4>
-        <p>Donated to teachers</p>
+        <p>Funds donated to teachers</p>
       </div>
       <div class="large-4 columns">
         <h4>750</h4>
         <p>Minds opened and counting</p>
       </div>
-      <div class="large-12 columns">
-        <img src="images/mapiconcollage.png">
-      </div>
-    </div>
-    <!--How it Works Section-->
+    </div> 
+  <div class="donations-footer">
+  </div>
+  </section>
+ 
+  <!--How it Works Section-->
+  <section class="how-works">
     <div class="row">
       <div class="large-12 columns">
         <h2>TripSprout makes travel more accessible to teachers and students</h2>
@@ -146,30 +186,37 @@
         <img src="images/student.png">
       </div>
     </div>
-    <div class="row">
-      <div class="large-12 columns">
-         <h3>Get Started</h3>
-        <div class="row"
-          <div class="large-4 columns">
-            <ul>
-              <li><a href="#" class="button">I'm a Teacher</a></li>
-              <li>Create my account.</li>
-            </ul>
-          <div class="large-4 columns">
-            <ul>
-              <li> <a href="#" class="button">I'm a Donor</a></li>
-              <li>Look for trips to support.</li>
-            </ul>
-          </div>
+    <!--Get Started CTA-->
+    <div class="row start">
+      <h2>Get Started</h2>
+      <div class="large-3 columns large-offset-3 text-center">
+        <a href=""><div class="teacher-btn">
+          <p>I'm a Teacher</p>
+        </div></a>
+        <div>
+          <p>Create my account</p>
+        </div>
+      </div>
+      <div class="large-3 columns end text-center">
+        <a href=""><div class="donor-btn">
+          <p>I'm a Donor</p>
+        </div></a>
+        <div>
+          <p>Look for trips to support</p>
         </div>
       </div>
     </div>
-    <!--End Hero Quote and Footer Links-->
+  </section>
+
+  <!--End Hero Quote and Footer Links-->
+  <section class="end-hero">
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-12 columns text-center">
         <h2>"The world is a book and those who do not travel read only one page."</h2>
         <h4>-St. Augustine</h4>
+      </div>
     </div>
+  <div class="footer-navbar">
     <div class="row">
       <div class="large-6 columns">
         <img src="images/TripSproutLogo.png">
@@ -177,39 +224,43 @@
       <div class="large-6 columns">
         <div class="row">
           <div class="large-4 columns">
-          <ul>
-            <li>General</li>
-            <li>Contact</li>
-            <li>How it Works</li>
-            <li>Join Our Team</li>
-          </ul>
-          </div>
-          <div class="large-4 columns">
             <ul>
-              <li>For Donors</li>
-              <li>Search</li>
-              <li>Help</li>
+              <li>General</li>
+              <li>Contact</li>
+              <li>How it Works</li>
+              <li>Join Our Team</li>
             </ul>
-          </div>
-          <div class="large-4 columns">
-            <ul>
-              <li>For Teachers</li>
-              <li>My Account</li>
-              <li>FAQs</li>
-            </ul>
+            </div>
+            <div class="large-4 columns">
+              <ul>
+                <li>For Donors</li>
+                <li>Search</li>
+                <li>Help</li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <ul>
+                <li>For Teachers</li>
+                <li>My Account</li>
+                <li>FAQs</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--Footer Copyright-->
+  </div>
+  </section>
+<!--Footer Copyright-->
+  <section class="copyright">
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-12 columns text-center">
         <h6>&copy; Copyright 2015 Trip Sprout | Terms of Service | Privacy</h6>
       </div>
     </div>
-   
+  </section>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"><script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>

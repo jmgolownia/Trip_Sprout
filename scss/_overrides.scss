@@ -1,14 +1,49 @@
 //VARIABLES
 $primary-font: 'Lato';
+%basefont { 
+    font: $primary-font;
+    color: #fff;
+    text-align: center;}
 
+%mainheading {
+    font: $primary-font;
+    font-size: 2.75em;
+    color: #4A4A4A;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 45px;
+}
+
+$orange: #F68B03;
+$green: #87C145;
+$blue: #4A90E2;
+$purple: #9822C0;
+$slate: #4A4A4A;
+$navbar-bg: rgba(255, 255, 255, .69);
+
+/* MAIN PAGE STYLES */
+
+/* MAIN - Navigation and Hero */
 .hero-background {
-  height: 700px;
+  height: 900px;
   background-image: url("../images/japan.png");
   background-size: cover;
 
+    .nav-left {
+      margin-top: 35px;
+    }
+
+    .nav-center {
+      margin-top: 10px;
+    }
+
+    .nav-right {
+      margin-top: 30px;
+    }
+
     .navbar {
       height: 90px;
-      background-color: rgba(255, 255, 255, .69);
+      background-color: $navbar-bg;
     }
       ul {
         display: inline;
@@ -21,36 +56,245 @@ $primary-font: 'Lato';
           font: $primary-font;
           font-size: 16px;
           padding-right: 20px;
+          
+          a {
+          background-color: $green;
+            &:hover{
+              background-color: darken($green, 10%);
+            }
+          }
         }
     }
+
     .hero {
       h1 {
-        font: $primary-font;
-        color: #fff;
-        text-align: center;
-        margin-top: 200px;
-        padding-left: -100px;
+        @extend %basefont;
+        font-size: 55px;
+        text-shadow: 2px 2px $slate;
+        display: block;
+        margin-top: 215px;
+        margin-left: auto;
+        margin-right: auto;
       }
       h3 {
-        font: $primary-font;
-        color: #fff;
-        text-align: center;
-        font-size: 20px;
+        @extend %basefont;
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: 55px;
+      }
+      .cta-works {
+        background-color: $blue;
+        &:hover{
+              background-color: darken($blue, 10%);
+          }
+      }
+      .cta-search {
+        background-color: $purple;
+        &:hover{
+              background-color: darken($purple, 10%);
+          }
+        }
+    }
+  }
+
+/* MAIN - Search and Donate */
+  .search-donate {
+    height: 1200px;
+
+      h2 {
+        @extend %mainheading;
+      }
+      a {
+        background-color: $purple;
+      }
+      h4 {
+        margin-top: 25px;
+      }
+      h5 {
         font-weight: 300;
       }
+      .grade {
+        text-align: right;
+      }
+
+      .caption h6 {
+          background-color: rgba(255, 255, 255, .69);
+          padding: 10px;
+          color: $slate;
+          font-weight: 700;
+      }
+
+      .post-1 {
+        background: url('../images/capitol.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+      .post-2 {
+        background: url('../images/musicnotes.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+      .post-3 {
+        background: url('../images/shinto.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+
+      .category {
+        height: 250px;
+        padding-top: 35%;
+        padding-left: 10%;
+        padding-right: 10%;
+        @extend %basefont;
+        font-size: 25px;
+      }
+
+      .state {
+        background-color: $green;
+            &:hover{
+              background-color: darken($green, 10%);
+            }
+      }
+
+      .international {
+        background-color: $blue;
+            &:hover{
+              background-color: darken($blue, 10%);
+            }
+      }
+
+      .local {
+        background-color: $purple;
+            &:hover{
+              background-color: darken($purple, 10%);
+            }
+      }
+  }
+
+/* MAIN - Donation / Contributions Summary */
+  .donations-info {
+    height: 400px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgba(74,144,226,1)), color-stop(21%,rgba(74,144,226,1)), color-stop(22%,rgba(74,144,226,0.99)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(74,144,226,1) 2%,rgba(74,144,226,1) 21%,rgba(74,144,226,0.99) 22%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    
+    h2 {
+      @extend %mainheading;
+      color: #fff;
+    }
+
+    h4 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.75em;
+      color: $slate;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.25em;
+    }
+  }
+
+  .donations-footer {
+    background: url('../images/mapiconcollage.svg');
+    height: 200px;
+  }
+
+/* MAIN - How it Works Section */
+  .how-works {
+    height: 1000px;
+    margin-top: 200px;
+
+    h2 {
+      @extend %mainheading;
+      margin-bottom: 10px;
+    }
+
+    h3, p {
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 35px;
+    }
+  }
+
+/* MAIN - How it Works Call to Action */
+  .start {
+
+    h2 {
+      @extend %mainheading;
+      margin-top: 0px;
+    }
+
+    .teacher-btn {
+      background-color: $green;
+        &:hover {
+              background-color: darken($green, 10%);
+          }
+
+        p {
+          @extend %basefont;
+          font-size: 25px;
+          padding: 10px 0 10px 0;
+        }
+    }
+
+    .donor-btn {
+      background-color: $purple;
+        &:hover {
+              background-color: darken($purple, 10%);
+          }
+
+        p {
+          @extend %basefont;
+          font-size: 25px;
+           padding: 10px 0 10px 0;
+        }
     }
 }
 
-.nav-left {
-  margin-top: 35px;
-}
+/* MAIN - Footer and End Hero Section */
+  .end-hero {
+    height: 650px;
+    background: url('../images/london.jpg');
+    background-position: contain;
 
-.nav-center {
-  margin-top: 10px;
-}
+    h2 {
+      @extend %mainheading;
+      margin-bottom: 0;
+    }
 
-.nav-right {
-  margin-top: 30px;
-}
+    .footer-navbar {
+      background-color: $navbar-bg;
+      height: 150px;
+      margin-top: 260px;
+        img {
+          margin-top: 25px;
+        }
+        ul {
+        display: inline;
+        list-style: none;
+        margin-top: 50px;
+          li:nth-child(1) {
+            font-weight: 900;
+          }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: $slate;
+    height: 75px;
+      h6 {
+        @extend %basefont;
+        color: $navbar-bg;
+        margin-top: 25px;
+      }
+  }
 
 
