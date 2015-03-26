@@ -9159,14 +9159,14 @@ th.hide-for-touch {
 }
 /* line 3, ../scss/_overrides.scss */
 .hero-background .hero h1, .hero-background .hero h3, .search-donate .category, .start .teacher-btn p, .start .donor-btn p, .copyright h6 {
-  font: "Lato";
+  font-family: "Lato";
   color: #fff;
   text-align: center;
 }
 
 /* line 8, ../scss/_overrides.scss */
 .search-donate h2, .donations-info h2, .how-works h2, .start h2, .end-hero h2 {
-  font: "Lato";
+  font-family: "Lato";
   font-size: 2.75em;
   color: #4A4A4A;
   text-align: center;
@@ -9174,54 +9174,61 @@ th.hide-for-touch {
   margin-bottom: 45px;
 }
 
+/* 640px */
 /* MAIN PAGE STYLES */
 /* MAIN - Navigation and Hero */
-/* line 27, ../scss/_overrides.scss */
+/* line 36, ../scss/_overrides.scss */
 .hero-background {
   height: 900px;
   background-image: url("../images/japan.png");
   background-size: cover;
 }
-/* line 32, ../scss/_overrides.scss */
+/* line 41, ../scss/_overrides.scss */
 .hero-background .nav-left {
   margin-top: 35px;
 }
-/* line 36, ../scss/_overrides.scss */
+/* line 45, ../scss/_overrides.scss */
 .hero-background .nav-center {
   margin-top: 10px;
 }
-/* line 40, ../scss/_overrides.scss */
+/* line 49, ../scss/_overrides.scss */
 .hero-background .nav-right {
   margin-top: 30px;
 }
-/* line 44, ../scss/_overrides.scss */
+/* line 53, ../scss/_overrides.scss */
 .hero-background .navbar {
   height: 90px;
   background-color: rgba(255, 255, 255, 0.69);
 }
-/* line 48, ../scss/_overrides.scss */
+@media (max-width: 40em) {
+  /* line 53, ../scss/_overrides.scss */
+  .hero-background .navbar {
+    height: 150px;
+  }
+}
+/* line 62, ../scss/_overrides.scss */
 .hero-background ul {
   display: inline;
   list-style: none;
   margin-top: 50px;
 }
-/* line 53, ../scss/_overrides.scss */
+/* line 67, ../scss/_overrides.scss */
 .hero-background ul li {
   text-align: center;
   display: inline;
-  font: "Lato";
+  font-family: "Lato";
   font-size: 16px;
   padding-right: 20px;
 }
-/* line 60, ../scss/_overrides.scss */
+/* line 74, ../scss/_overrides.scss */
 .hero-background ul li a {
   background-color: #87C145;
 }
-/* line 62, ../scss/_overrides.scss */
+/* line 76, ../scss/_overrides.scss */
 .hero-background ul li a:hover {
   background-color: #6d9e35;
 }
-/* line 70, ../scss/_overrides.scss */
+/* line 84, ../scss/_overrides.scss */
 .hero-background .hero h1 {
   font-size: 55px;
   text-shadow: 2px 2px #4A4A4A;
@@ -9230,79 +9237,79 @@ th.hide-for-touch {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 79, ../scss/_overrides.scss */
+/* line 93, ../scss/_overrides.scss */
 .hero-background .hero h3 {
   font-size: 25px;
   font-weight: 300;
   margin-top: 55px;
 }
-/* line 85, ../scss/_overrides.scss */
+/* line 99, ../scss/_overrides.scss */
 .hero-background .hero .cta-works {
   background-color: #4A90E2;
 }
-/* line 87, ../scss/_overrides.scss */
+/* line 101, ../scss/_overrides.scss */
 .hero-background .hero .cta-works:hover {
   background-color: #2275d7;
 }
-/* line 91, ../scss/_overrides.scss */
+/* line 105, ../scss/_overrides.scss */
 .hero-background .hero .cta-search {
   background-color: #9822C0;
 }
-/* line 93, ../scss/_overrides.scss */
+/* line 107, ../scss/_overrides.scss */
 .hero-background .hero .cta-search:hover {
   background-color: #761a95;
 }
 
 /* MAIN - Search and Donate */
-/* line 101, ../scss/_overrides.scss */
+/* line 115, ../scss/_overrides.scss */
 .search-donate {
   height: 1200px;
 }
-/* line 107, ../scss/_overrides.scss */
+/* line 121, ../scss/_overrides.scss */
 .search-donate a {
   background-color: #9822C0;
 }
-/* line 110, ../scss/_overrides.scss */
+/* line 124, ../scss/_overrides.scss */
 .search-donate h4 {
   margin-top: 25px;
 }
-/* line 113, ../scss/_overrides.scss */
+/* line 127, ../scss/_overrides.scss */
 .search-donate h5 {
   font-weight: 300;
 }
-/* line 116, ../scss/_overrides.scss */
+/* line 130, ../scss/_overrides.scss */
 .search-donate .grade {
   text-align: right;
 }
-/* line 120, ../scss/_overrides.scss */
+/* line 134, ../scss/_overrides.scss */
 .search-donate .caption h6 {
   background-color: rgba(255, 255, 255, 0.69);
   padding: 10px;
   color: #4A4A4A;
   font-weight: 700;
 }
-/* line 127, ../scss/_overrides.scss */
+/* line 141, ../scss/_overrides.scss */
 .search-donate .post-1 {
   background: url("../images/capitol.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 133, ../scss/_overrides.scss */
+/* line 147, ../scss/_overrides.scss */
 .search-donate .post-2 {
   background: url("../images/musicnotes.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 139, ../scss/_overrides.scss */
+/* line 153, ../scss/_overrides.scss */
 .search-donate .post-3 {
   background: url("../images/shinto.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 146, ../scss/_overrides.scss */
+/* line 160, ../scss/_overrides.scss */
 .search-donate .category {
   height: 250px;
   padding-top: 35%;
@@ -9310,153 +9317,171 @@ th.hide-for-touch {
   padding-right: 10%;
   font-size: 25px;
 }
-/* line 155, ../scss/_overrides.scss */
+/* line 169, ../scss/_overrides.scss */
 .search-donate .state {
   background-color: #87C145;
 }
-/* line 157, ../scss/_overrides.scss */
+/* line 171, ../scss/_overrides.scss */
 .search-donate .state:hover {
   background-color: #6d9e35;
 }
-/* line 162, ../scss/_overrides.scss */
+/* line 176, ../scss/_overrides.scss */
 .search-donate .international {
   background-color: #4A90E2;
 }
-/* line 164, ../scss/_overrides.scss */
+/* line 178, ../scss/_overrides.scss */
 .search-donate .international:hover {
   background-color: #2275d7;
 }
-/* line 169, ../scss/_overrides.scss */
+/* line 183, ../scss/_overrides.scss */
 .search-donate .local {
   background-color: #9822C0;
 }
-/* line 171, ../scss/_overrides.scss */
+/* line 185, ../scss/_overrides.scss */
 .search-donate .local:hover {
   background-color: #761a95;
 }
 
 /* MAIN - Donation / Contributions Summary */
-/* line 178, ../scss/_overrides.scss */
+/* line 192, ../scss/_overrides.scss */
 .donations-info {
   height: 400px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #4a90e2), color-stop(21%, #4a90e2), color-stop(22%, rgba(74, 144, 226, 0.99)), color-stop(100%, rgba(255, 255, 255, 0)));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #4a90e2 2%, #4a90e2 21%, rgba(74, 144, 226, 0.99) 22%, rgba(255, 255, 255, 0) 100%);
   /* Chrome10+,Safari5.1+ */
+  margin-bottom: 200px;
 }
-/* line 183, ../scss/_overrides.scss */
+/* line 198, ../scss/_overrides.scss */
 .donations-info h2 {
   color: #fff;
 }
-/* line 188, ../scss/_overrides.scss */
+/* line 203, ../scss/_overrides.scss */
 .donations-info h4 {
   text-align: center;
   font-weight: 700;
   font-size: 2.75em;
   color: #4A4A4A;
 }
-/* line 195, ../scss/_overrides.scss */
+/* line 210, ../scss/_overrides.scss */
 .donations-info p {
   text-align: center;
   font-weight: 300;
   font-size: 1.25em;
 }
 
-/* line 202, ../scss/_overrides.scss */
+/* line 217, ../scss/_overrides.scss */
 .donations-footer {
   background: url("../images/mapiconcollage.svg");
   height: 200px;
 }
 
 /* MAIN - How it Works Section */
-/* line 208, ../scss/_overrides.scss */
+/* line 223, ../scss/_overrides.scss */
 .how-works {
-  height: 1000px;
-  margin-top: 200px;
+  height: 550px;
 }
-/* line 212, ../scss/_overrides.scss */
+/* line 226, ../scss/_overrides.scss */
+.how-works img {
+  position: absolute;
+  margin-top: -400px;
+}
+/* line 231, ../scss/_overrides.scss */
+.how-works .student {
+  position: relative;
+  float: right;
+}
+/* line 235, ../scss/_overrides.scss */
 .how-works h2 {
   margin-bottom: 10px;
 }
-/* line 217, ../scss/_overrides.scss */
+/* line 240, ../scss/_overrides.scss */
 .how-works h3, .how-works p {
   text-align: center;
+  max-width: 40%;
+  margin: auto;
 }
-/* line 221, ../scss/_overrides.scss */
+/* line 246, ../scss/_overrides.scss */
 .how-works h3 {
   margin-top: 35px;
 }
 
 /* MAIN - How it Works Call to Action */
-/* line 229, ../scss/_overrides.scss */
-.start h2 {
-  margin-top: 0px;
+/* line 252, ../scss/_overrides.scss */
+.start {
+  height: 450px;
 }
-/* line 234, ../scss/_overrides.scss */
+/* line 255, ../scss/_overrides.scss */
+.start h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* line 261, ../scss/_overrides.scss */
 .start .teacher-btn {
   background-color: #87C145;
 }
-/* line 236, ../scss/_overrides.scss */
+/* line 263, ../scss/_overrides.scss */
 .start .teacher-btn:hover {
   background-color: #6d9e35;
 }
-/* line 240, ../scss/_overrides.scss */
+/* line 267, ../scss/_overrides.scss */
 .start .teacher-btn p {
   font-size: 25px;
   padding: 10px 0 10px 0;
 }
-/* line 247, ../scss/_overrides.scss */
+/* line 274, ../scss/_overrides.scss */
 .start .donor-btn {
   background-color: #9822C0;
 }
-/* line 249, ../scss/_overrides.scss */
+/* line 276, ../scss/_overrides.scss */
 .start .donor-btn:hover {
   background-color: #761a95;
 }
-/* line 253, ../scss/_overrides.scss */
+/* line 280, ../scss/_overrides.scss */
 .start .donor-btn p {
   font-size: 25px;
   padding: 10px 0 10px 0;
 }
 
 /* MAIN - Footer and End Hero Section */
-/* line 262, ../scss/_overrides.scss */
+/* line 289, ../scss/_overrides.scss */
 .end-hero {
   height: 650px;
   background: url("../images/london.jpg");
   background-position: contain;
+  background-repeat: no-repeat;
 }
-/* line 267, ../scss/_overrides.scss */
+/* line 295, ../scss/_overrides.scss */
 .end-hero h2 {
   margin-bottom: 0;
 }
-/* line 272, ../scss/_overrides.scss */
+/* line 300, ../scss/_overrides.scss */
 .end-hero .footer-navbar {
   background-color: rgba(255, 255, 255, 0.69);
   height: 150px;
   margin-top: 260px;
 }
-/* line 276, ../scss/_overrides.scss */
+/* line 304, ../scss/_overrides.scss */
 .end-hero .footer-navbar img {
   margin-top: 25px;
 }
-/* line 279, ../scss/_overrides.scss */
+/* line 307, ../scss/_overrides.scss */
 .end-hero .footer-navbar ul {
   display: inline;
   list-style: none;
   margin-top: 50px;
 }
-/* line 283, ../scss/_overrides.scss */
+/* line 311, ../scss/_overrides.scss */
 .end-hero .footer-navbar ul li:nth-child(1) {
   font-weight: 900;
 }
 
-/* line 290, ../scss/_overrides.scss */
+/* line 318, ../scss/_overrides.scss */
 .copyright {
   background-color: #4A4A4A;
   height: 75px;
 }
-/* line 293, ../scss/_overrides.scss */
+/* line 321, ../scss/_overrides.scss */
 .copyright h6 {
   color: rgba(255, 255, 255, 0.69);
   margin-top: 25px;

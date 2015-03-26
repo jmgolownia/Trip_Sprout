@@ -1,12 +1,12 @@
 //VARIABLES
 $primary-font: 'Lato';
 %basefont { 
-    font: $primary-font;
+    font-family: $primary-font;
     color: #fff;
     text-align: center;}
 
 %mainheading {
-    font: $primary-font;
+    font-family: $primary-font;
     font-size: 2.75em;
     color: #4A4A4A;
     text-align: center;
@@ -21,8 +21,17 @@ $purple: #9822C0;
 $slate: #4A4A4A;
 $navbar-bg: rgba(255, 255, 255, .69);
 
-/* MAIN PAGE STYLES */
+//MEDIA QUERY VARIABLES
 
+$tablet-width: 40em; /* 640px */
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+/* MAIN PAGE STYLES */
 /* MAIN - Navigation and Hero */
 .hero-background {
   height: 900px;
@@ -44,7 +53,12 @@ $navbar-bg: rgba(255, 255, 255, .69);
     .navbar {
       height: 90px;
       background-color: $navbar-bg;
+        @include tablet {
+        height: 150px;
+      }
+
     }
+
       ul {
         display: inline;
         list-style: none;
@@ -53,7 +67,7 @@ $navbar-bg: rgba(255, 255, 255, .69);
         li {
           text-align: center;
           display: inline;
-          font: $primary-font;
+          font-family: $primary-font;
           font-size: 16px;
           padding-right: 20px;
           
@@ -179,7 +193,8 @@ $navbar-bg: rgba(255, 255, 255, .69);
     height: 400px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgba(74,144,226,1)), color-stop(21%,rgba(74,144,226,1)), color-stop(22%,rgba(74,144,226,0.99)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(74,144,226,1) 2%,rgba(74,144,226,1) 21%,rgba(74,144,226,0.99) 22%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-    
+    margin-bottom: 200px;
+
     h2 {
       @extend %mainheading;
       color: #fff;
@@ -206,9 +221,17 @@ $navbar-bg: rgba(255, 255, 255, .69);
 
 /* MAIN - How it Works Section */
   .how-works {
-    height: 1000px;
-    margin-top: 200px;
+    height: 550px;
 
+    img {
+      position: absolute;
+      margin-top: -400px;
+    }
+
+    .student {
+      position: relative;
+      float: right;
+    }
     h2 {
       @extend %mainheading;
       margin-bottom: 10px;
@@ -216,6 +239,8 @@ $navbar-bg: rgba(255, 255, 255, .69);
 
     h3, p {
       text-align: center;
+      max-width: 40%;
+      margin: auto;
     }
 
     h3 {
@@ -225,10 +250,12 @@ $navbar-bg: rgba(255, 255, 255, .69);
 
 /* MAIN - How it Works Call to Action */
   .start {
+    height: 450px;
 
     h2 {
       @extend %mainheading;
-      margin-top: 0px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .teacher-btn {
@@ -263,6 +290,7 @@ $navbar-bg: rgba(255, 255, 255, .69);
     height: 650px;
     background: url('../images/london.jpg');
     background-position: contain;
+    background-repeat: no-repeat;
 
     h2 {
       @extend %mainheading;
@@ -294,7 +322,7 @@ $navbar-bg: rgba(255, 255, 255, .69);
         @extend %basefont;
         color: $navbar-bg;
         margin-top: 25px;
+        }
       }
-  }
 
 
