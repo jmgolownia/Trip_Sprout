@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripSprout - Create</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="//use.typekit.net/ezo4cez.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+  <nav>
+    <img src="images/TripSproutLogo.png">
+    <ul>
+      <li>Dashboard</li>
+      <li>Create</li>
+      <li>Manage</li>
+      <li>Account</li>
+      <li><a href="#" class="small button">Logout</a></li>
+    </ul>
+  </nav>
+  <section class="page-bar">
+    <div class="row">
+      <div class="large-7 columns">
+        <h2>Create a new trip</h2>
+      </div>
+      <div class="large-5 columns">
+        <a href="#" class="preview button">Preview Page</a>
+        <a href="#" class="save button">Save and Exit</a>
+      </div>
+    </div>
+  </section>
+  <!--Create Page Content Editor-->
+  <section class="trip-input">
+    <div class="row">
+      <!--Left Side Main Column-->
+      <div class="large-8 columns">
+        <form>
+          <fieldset>
+            <legend>Name Your Trip</legend>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Tell donors what your trip is all about in a snapshot. Keep it simple to grab their attention.</label>
+                  <input type="text" placeholder="60 characters max." />
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Brief Highlights</legend>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Provide a short list of places or major activities that will take place on your trip.</label>
+                  <input type="text" placeholder="120 characters max." />
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Describe Your Trip</legend>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Here is your opportunity to passionately tell donors more about your trip and how it will impact students. Provide a clear story to help people understand how their dona8ons are being used.</label>
+                  <textarea></textarea>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Trip Itinerary</legend>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Here you can give donors a quick overview about each day of your trip so they better understand what students will be expierencing.</label>
+                  <textarea></textarea>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <!--Right Side Secondary Column-->
+      <div class="large-4 columns">
+        <form>
+          <div class="photo-upload">
+            <fieldset>
+              <legend>Class Photo</legend>
+              <div class="photo-bg">
+                <p>JPG / PNG / TIFF</p>
+              </div>
+              <a href="#" class="button small">Choose a photo...</a>
+            </fieldset>
+          </div>
+          <div class="trip-logistics">
+            <fieldset>
+              <legend>Trip Logistics</legend>
+                <div class="row collapse">
+                  <label>Where are you traveling to?</label>
+                  <div class="small-9 large-10 columns">
+                      <input type="text" placeholder="City, State / Country">
+                  </div>
+                  <div class="small-3 large-2 columns">
+                    <span class="button postfix">+</span>
+                  </div>
+                </div>
+                  <label>Departure Date</label>
+                    <input type="text" placeholder="MM / DD / YYY" />
+                  <label>Return Date </label>
+                    <input type="text" placeholder="MM / DD / YYY" />
+                <div class="row">
+                  <div class="large-7 columns">
+                    <label>Number of Students
+                      <input type="text" placeholder="e.g. 25">
+                    </label>
+                  </div>
+                  <div class="large-5 columns">
+                    <label>Grade Level
+                      <input type="text" placeholder="e.g. 9th">
+                    </label>
+                  </div>
+                </div>
+            </fieldset>
+          </div>
+          <div class="trip-photos">
+            <fieldset>
+              <legend>Trip Photos</legend>
+              <div class="photo-bg">
+                <p>JPG / PNG / TIFF</p>
+              </div>
+              <textarea>add a photo and write a brief caption about a place or activity on your trip...</textarea>
+              <a href="#" class="button small">Choose a photo...</a>
+              <div class="photo-bg">
+                <p>JPG / PNG / TIFF</p>
+              </div>
+              <textarea>add a photo and write a brief caption about a place or activity on your trip...</textarea>
+              <a href="#" class="button small">Choose a photo...</a>
+            </fieldset>
+          </div>  
+      </div>
+    </div>
+    <!--Donation Specifications-->
+    <div class="row">
+      <div class="large-12 columns">
+        <fieldset>
+          <legend>Fundraising Goal</legend>
+          <p>TripSprout allows you to raise up to $1 million for a single trip and you can collect donations for up to two years for your specific project. Contact our team if your project cannot meet these guidelines.</p>
+            <div class="large-6 columns">
+              <label>Enter the total amount to fundraise</label>
+              <input type="text" placeholder="e.g. $10,725">
+            </div>
+            <div class="large-6 columns">
+              <label>When will your fundraising campaign end?</label>
+              <input type="text" placeholder="MM / DD / YYY">
+            </div>
+        </fieldset>
+      </div>
+      <div class="large-12 columns">
+        <fieldset>
+          <legend>Donation Options</legend>
+          <p>TripSprout allows you to customize donation options for anyone visiting your page. These are not only convenient for donors but they help a visitor understand how their donation could directly support your students.</p>
+            <div class="large-5 columns">
+              <div class="row collapse">
+                <label>Set the donation amount that will appear on this button</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="From $1 to $1,000" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">$</span>
+                </div>
+              </div>
+            </div>
+            <div class="large-7 columns">
+              <label>Describe a specific example of how giving this amount will directly help students</label>
+              <input type="text" placeholder="e.g. Give $20 to help send 1 student to the White House">
+            </div>
+            <div class="large-5 columns">
+              <div class="row collapse">
+                <label>Set the donation amount that will appear on this button</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="From $1 to $1,000" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">$</span>
+                </div>
+              </div>
+            </div>
+            <div class="large-7 columns">
+              <label>Describe a specific example of how giving this amount will directly help students</label>
+              <input type="text" placeholder="e.g. Give $20 to help send 1 student to the White House">
+            </div>
+            <div class="large-5 columns">
+              <div class="row collapse">
+                <label>Set the donation amount that will appear on this button</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="From $1 to $1,000" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">$</span>
+                </div>
+              </div>
+            </div>
+            <div class="large-7 columns">
+              <label>Describe a specific example of how giving this amount will directly help students</label>
+              <input type="text" placeholder="e.g. Give $20 to help send 1 student to the White House">
+            </div>
+            <div class="large-5 columns">
+              <div class="row collapse">
+                <label>Set the donation amount that will appear on this button</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="From $1 to $1,000" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">$</span>
+                </div>
+              </div>
+            </div>
+            <div class="large-7 columns">
+              <label>Describe a specific example of how giving this amount will directly help students</label>
+              <input type="text" placeholder="e.g. Give $20 to help send 1 student to the White House">
+            </div>
+        </fieldset>
+      </div>
+      <div class="large-12 columns save-preview-bottom">
+        <a href="#" class="preview button">Preview Page</a>
+        <a href="#" class="save button">Save and Exit</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="medium- 12 large-12 columns text-center">
+        <h6>&copy; Copyright 2015 Trip Sprout | Terms of Service | Privacy</h6>
+      </div>
+    </div>
+  </footer>
+     <script src="bower_components/jquery/dist/jquery.min.js"><script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

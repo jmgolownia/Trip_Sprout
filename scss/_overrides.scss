@@ -1,5 +1,6 @@
 //VARIABLES
-$primary-font: 'Lato';
+$primary-font: 'lato';
+$alt-font: 'ff-market-web';
 %basefont { 
     font-family: $primary-font;
     color: #fff;
@@ -19,27 +20,95 @@ $green: #87C145;
 $blue: #4A90E2;
 $purple: #9822C0;
 $slate: #4A4A4A;
+$gray: #D8D6D6;
 $navbar-bg: rgba(255, 255, 255, .69);
 
 //MEDIA QUERY VARIABLES
 
-$tablet-width: 40em; /* 640px */
+$mobile-width: 40em; /* 640px */
+$tablet-min: 40.063em; /* 641 px */
+$tablet-max: 64em; /* 1024 px */
 
-@mixin tablet {
-  @media (max-width: #{$tablet-width}) {
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
     @content;
   }
 }
 
-/* MAIN PAGE STYLES */
+@mixin tablet {
+  @media (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) {
+    @content;
+  }
+}
+
+//SHARED PAGE STYLES
+nav {
+  height: 100px;
+  img {
+    margin-top: 10px;
+    margin-left: 25px; 
+  }
+  ul {
+    display: inline;
+    list-style: none;
+    float: right;
+    margin-top: 30px;
+    li {
+      text-align: center;
+      display: inline;
+      font-family: $primary-font;
+      font-size: 16px;
+      padding-right: 30px;
+    .button {
+        background-color: $slate;
+        &:hover {
+          background-color: $slate;
+        }
+      }
+    }
+  }
+}
+
+footer {
+    background-color: $slate;
+    height: 75px;
+      @include mobile {
+        height: 90px;
+      }
+
+      h6 {
+        @extend %basefont;
+        color: $navbar-bg;
+        margin-top: 10px;
+        }
+    }
+
+//MAIN PAGE STYLES
 /* MAIN - Navigation and Hero */
 .hero-background {
-  height: 900px;
+  height: 925px;
   background-image: url("../images/japan.png");
   background-size: cover;
+    @include mobile {
+      height: 650px;
+      background-image: url("../images/pisa.jpg");
+      background-position: top center;
+    }
+    @include tablet {
+      height: 800px;
+      background-image: url("../images/brandenburg.jpg");
+      background-position: -200px, 0, bottom;
+      background-size: cover;
+    }
 
     .nav-left {
       margin-top: 35px;
+        @include mobile {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
     }
 
     .nav-center {
@@ -48,13 +117,32 @@ $tablet-width: 40em; /* 640px */
 
     .nav-right {
       margin-top: 30px;
+        @include mobile {
+          display: block;
+          text-align: center;
+          margin-top: 20px;
+          ul > li:nth-child(1) {
+            display: none;
+          }
+          a {
+            padding: 10px 40px;
+            font-size: 18px;
+          }
+        }
+        @include tablet {
+          ul {
+            display: block;
+            float: right;
+            margin-top: auto;
+          }
+        }
     }
 
     .navbar {
       height: 90px;
       background-color: $navbar-bg;
-        @include tablet {
-        height: 150px;
+        @include mobile {
+        height: 160px;
       }
 
     }
@@ -89,13 +177,33 @@ $tablet-width: 40em; /* 640px */
         margin-top: 215px;
         margin-left: auto;
         margin-right: auto;
+          @include mobile {
+          display: none;
+          }
+          @include tablet {
+            margin-top: 150px;
+          }
       }
+
       h3 {
         @extend %basefont;
         font-size: 25px;
         font-weight: 300;
         margin-top: 55px;
+        text-shadow: 2px 2px 8px $slate;
+          @include mobile {
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 75px;
+            margin-bottom: 50px;
+          }
+          @include tablet {
+            max-width: 80%;
+            margin: 25px auto;
+            font-weight: 400;
+          }
       }
+
       .cta-works {
         background-color: $blue;
         &:hover{
@@ -117,15 +225,30 @@ $tablet-width: 40em; /* 640px */
 
       h2 {
         @extend %mainheading;
+          span {
+            font-family: 'ff-market-web';
+        }
       }
       a {
         background-color: $purple;
       }
       h4 {
+        font-family: $primary-font;
         margin-top: 25px;
+        @include tablet {
+          text-align: center;
+        }
+        @include mobile {
+          font-size: 20px;
+          text-align: center;
+        }
       }
       h5 {
+        font-family: $primary-font;
         font-weight: 300;
+        @include mobile {
+          text-align: center;
+        }
       }
       .grade {
         text-align: right;
@@ -157,6 +280,14 @@ $tablet-width: 40em; /* 640px */
         height: 250px;
       }
 
+      .post-description {
+        a {
+          background-color: #fff;
+          color: $orange;
+          font-weight: 400;
+        }
+      }
+
       .category {
         height: 250px;
         padding-top: 35%;
@@ -164,6 +295,16 @@ $tablet-width: 40em; /* 640px */
         padding-right: 10%;
         @extend %basefont;
         font-size: 25px;
+          @include tablet {
+            height: 125px;
+            padding: 15% 5%;
+            font-size: 20px;
+          }
+          @include mobile {
+            height: 125px;
+            padding: 15% 5%;
+            font-size: 20px;
+          }
       }
 
       .state {
@@ -194,10 +335,25 @@ $tablet-width: 40em; /* 640px */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgba(74,144,226,1)), color-stop(21%,rgba(74,144,226,1)), color-stop(22%,rgba(74,144,226,0.99)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(74,144,226,1) 2%,rgba(74,144,226,1) 21%,rgba(74,144,226,0.99) 22%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
     margin-bottom: 200px;
+      @include mobile {
+        float: left;
+        margin-top: 75px;
+        height: 650px;
+      }
+      @include tablet {
+        float: left;
+        margin-top: 75px;
+      }
 
     h2 {
       @extend %mainheading;
       color: #fff;
+        span {
+          font-family: $alt-font;
+        }
+      @include mobile {
+        font-size: 35px;
+      }
     }
 
     h4 {
@@ -222,10 +378,16 @@ $tablet-width: 40em; /* 640px */
 /* MAIN - How it Works Section */
   .how-works {
     height: 550px;
+    @include mobile {
+      margin-top: 150px;
+    }
 
     img {
       position: absolute;
       margin-top: -400px;
+      @include mobile {
+        display: none;
+      }
     }
 
     .student {
@@ -235,12 +397,18 @@ $tablet-width: 40em; /* 640px */
     h2 {
       @extend %mainheading;
       margin-bottom: 10px;
+      @include mobile {
+        font-size: 35px;
+      }
     }
 
     h3, p {
       text-align: center;
       max-width: 40%;
       margin: auto;
+      @include mobile {
+        max-width: 85%;
+      }
     }
 
     h3 {
@@ -254,6 +422,8 @@ $tablet-width: 40em; /* 640px */
 
     h2 {
       @extend %mainheading;
+      font-family: $alt-font;
+      font-size: 3em;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -287,42 +457,234 @@ $tablet-width: 40em; /* 640px */
 
 /* MAIN - Footer and End Hero Section */
   .end-hero {
-    height: 650px;
-    background: url('../images/london.jpg');
-    background-position: contain;
-    background-repeat: no-repeat;
-
+    height: 800px;
+    background: url('../images/grandcentral.jpeg');
+    background-size: cover;
+      @include mobile {
+        height: 750px;
+        float: left;
+        background: url('../images/europestreet.jpeg');
+        background-size: cover;
+        background-position: bottom center;
+      }
+      @include tablet {
+        height: 800px;
+        float: left;
+        background: url('../images/london.jpg');
+        background-size: cover;
+        background-position: bottom center;
+      }
+      @media (min-width: #{$tablet-min}) and (max-width: 735px) {
+        height: 790px;
+      }
+ 
     h2 {
       @extend %mainheading;
+      text-shadow: 2px 2px 8px #fff;
+      margin-top: 150px;
       margin-bottom: 0;
+        span {
+          font-family: $alt-font;
+        }
+      @include mobile {
+        font-size: 35px;
+        color: #fff;
+        text-shadow: 2px 2px $slate;
+      }
+
+    }
+
+    h4 {
+      font-family: $alt-font;
+      font-size: 35px;
+      @include mobile {
+        color: #fff;
+      }
     }
 
     .footer-navbar {
       background-color: $navbar-bg;
-      height: 150px;
+      height: 175px;
       margin-top: 260px;
+        @include mobile {
+          margin-top: 25%;
+          height: 225px;
+            ul {
+              display: inline;
+              li {
+                display: inline;
+                font-size: 16px;
+              }
+              li:not(:first-child) {
+                  padding-left: 2%;
+                }
+            .foot-div {
+              margin-top: 25px;
+              }
+
+            }
+        }
+
         img {
           margin-top: 25px;
+          @include mobile {
+            margin-bottom: 25px;
+          }
         }
+
         ul {
-        display: inline;
         list-style: none;
         margin-top: 50px;
           li:nth-child(1) {
             font-weight: 900;
           }
-      }
+        }
     }
-  }
-
   .copyright {
     background-color: $slate;
     height: 75px;
+      @include mobile {
+        height: 90px;
+      }
+
       h6 {
         @extend %basefont;
         color: $navbar-bg;
         margin-top: 25px;
         }
+    }
+  }
+
+//DASHBOARD STYLES
+.welcome-info {
+  height: 500px;
+  background: url('../images/louvre.jpeg');
+  background-position: bottom center;
+  .teacher-info {
+    background-color: $navbar-bg;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+    ul {
+      display: inline;
+      margin-left: 25px;
+      li {
+        display: inline;
+        list-style: none;
       }
+    }
+  }
+
+.title-bar {
+  height: 65px;
+  background-color: $slate;
+  h3 {
+    font-family: $primary-font;
+    color: #fff;
+  }
+}
+
+
+//CREATE TRIP PAGE STYLES
+.page-bar {
+  background-color: $slate;
+  h2 {
+    font-family: $primary-font;
+    color: #fff;
+    margin-top: 15px;
+  }
+  .save {
+    background-color: $green;
+      &:hover {
+        background-color: darken($green, 10%);
+      }
+  }
+  .preview {
+    background-color: $blue;
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+  }
+}
+
+.trip-input {
+  height: 2400px;
+  fieldset {
+    padding: 5px 20px;
+    legend {
+    font-size: 24px;
+    margin-bottom: 0px;
+    }
+    textarea {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  .photo-bg {
+    background-color: $gray;
+    height: 175px;
+    margin-bottom: 10px;
+    p {
+      text-align: center;
+      padding-top: 75px;
+      color: $slate;
+    } 
+  }
+
+  .trip-photos {
+    textarea {
+      height: 50px;
+    }
+  }
+
+  a {
+      background-color: $purple;
+      &:hover {
+          background-color: darken($purple, 10%);
+        }
+    }
+
+  .save-preview-bottom {
+    height: 150px;
+      a {
+        margin-top: 45px;
+      }
+    .save {
+      background-color: $green;
+        &:hover {
+          background-color: darken($green, 10%);
+        }
+      }
+    .preview {
+      background-color: $blue;
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+    }
+  }
+}
+
+//PREVIEW AND VIEW PAGE STYLES
+.hero-unit {
+  height: 500px;
+  background: url('../images/uscapitol.jpg');
+  background-size: cover;
+  background-position: center center;
+  h2 {
+    font-family: $primary-font;
+    text-align: left;
+    color: $slate;
+    background-color: $navbar-bg;
+    padding-left: 25px;
+  }
+}
+
+.class-photo {
+  height: 250px;
+  background-color: $gray;
+}
+
+
 
 
