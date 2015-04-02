@@ -10,14 +10,30 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+  <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <a class="right-off-canvas-toggle" href="#" >&#9776;</a>
+          <!-- Off Canvas Menu -->
+          <aside class="right-off-canvas-menu">
+            <ul>
+              <li><img src="images/rodriguez.png"></li>
+              <li>Mr. Rodriguez's TripSprout</li>
+              <a href="dashboard.html"><li>Dashboard</li></a>
+              <a href="create.html"><li>Create</li></a>
+              <li><a href="#">Manage</a></li>
+              <li><a href="#">Account</a></li>
+              <li><a href="index.html" class="small button">Logout</a></li>
+            </ul>
+          </aside>
+          <a class="exit-off-canvas"></a>
   <nav>
     <img src="images/TripSproutLogo.png">
     <ul>
-      <li>Dashboard</li>
-      <li>Create</li>
-      <li>Manage</li>
-      <li>Account</li>
-      <li><a href="#" class="small button">Logout</a></li>
+      <a href="dashboard.html"><li>Dashboard</li></a>
+      <a href="create.html"><li>Create</li></a>
+      <a href=""><li>Manage</li></a>
+      <a href=""><li>Account</li></a>
+      <li><a href="index.html" class="small button">Logout</a></li>
     </ul>
   </nav>
   <section class="page-bar">
@@ -26,8 +42,8 @@
         <h2>Create a new trip</h2>
       </div>
       <div class="large-5 columns">
-        <a href="#" class="preview button">Preview Page</a>
-        <a href="#" class="save button">Save and Exit</a>
+        <a href="preview.html" class="preview button">Preview Page</a>
+        <a href="dashboard.html" class="save button">Save and Exit</a>
       </div>
     </div>
   </section>
@@ -221,8 +237,8 @@
         </fieldset>
       </div>
       <div class="large-12 columns save-preview-bottom">
-        <a href="#" class="preview button">Preview Page</a>
-        <a href="#" class="save button">Save and Exit</a>
+        <a href="preview.html" class="preview button">Preview Page</a>
+        <a href="dashboard.html" class="save button">Save and Exit</a>
       </div>
     </div>
   </section>
@@ -233,7 +249,8 @@
       </div>
     </div>
   </footer>
-     <script src="bower_components/jquery/dist/jquery.min.js"><script>
+  </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>

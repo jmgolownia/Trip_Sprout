@@ -10,24 +10,40 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+  <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <a class="right-off-canvas-toggle" href="#" >&#9776;</a>
+          <!-- Off Canvas Menu -->
+          <aside class="right-off-canvas-menu">
+            <ul>
+              <li><img src="images/rodriguez.png"></li>
+              <li>Mr. Rodriguez's TripSprout</li>
+              <a href="dashboard.html"><li>Dashboard</li></a>
+              <a href="create.html"><li>Create</li></a>
+              <li><a href="#">Manage</a></li>
+              <li><a href="#">Account</a></li>
+              <li><a href="logout.html" class="small button">Logout</a></li>
+            </ul>
+          </aside>
+          <a class="exit-off-canvas"></a>
   <nav>
     <img src="images/TripSproutLogo.png">
     <ul>
-      <li>Dashboard</li>
-      <li>Create</li>
-      <li>Manage</li>
-      <li>Account</li>
-      <li><a href="#" class="small button">Logout</a></li>
+      <a href="dashboard.html"><li>Dashboard</li></a>
+      <a href="create.html"><li>Create</li></a>
+      <a href=""><li>Manage</li></a>
+      <a href=""><li>Account</li></a>
+      <li><a href="index.html" class="small button">Logout</a></li>
     </ul>
   </nav>
   <section class="welcome-info">
     <div class="teacher-info">
       <ul>
         <li><img src="images/rodriguez.png"></li>
-        <li>Hi Mr. Rodriguez</li>
+        <li>Hi Mr. Rodriguez!</li>
         <li>Parkview Middle School, Minneapolis MN</li>
       </ul>
-      <a href="#" class="large button">+ New Trip</a>
+      <a href="create.html" class="large button">+ New Trip</a>
     </div>
   </section>
   <section class="title-bar">
@@ -41,24 +57,26 @@
     <div class="row trip-1">
       <div class="large-8 columns">
         <h4>Complete our simulation with a visit to Capitol Hill</h4>
-        <div class="chart">
+        <div class="large-4 columns chart">
         </div>
-        <div class="donation-data">
+        <div class="large-8 columns donation-data">
           <ul>
-            <li>$2,107 raised so far!</li>
-            <li>$6,393 needed to reach your goal of $8,500</li>
-            <li>Last Donation: Yesterday at 5:45 pm</li>
-            <li>Total Donations: 25</li>
-            <li>Days Remaining in Campaign: 39</li>
+            <li><span>$2,107</span> raised so far!</li>
+            <li><span>$6,393</span> needed to reach your goal of $8,500</li>
+            <li><span>Last Donation:</span> Yesterday at 5:45 pm</li>
+            <li><span>Total Donations:</span> 25</li>
+            <li><span>Days Remaining in Campaign:</span> 39</li>
+            <li><a href="#" class="large button">Manage</a></li>
           </ul>
         </div>
       </div>
-      <div class="large-4 columns">
+      <div class="large-4 columns trip-data">
         <ul>
-          <li>Location: Washington D.C.</li>
-          <li>Duration: 5 Days, 4 Nights</li>
-          <li>Number of Students: 75</li>
-          <li>Description: Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class already has our trip created, we just need… READ MORE></li>
+          <li><span>Location:</span> Washington D.C.</li>
+          <li><span>Duration:</span> 5 Days, 4 Nights</li>
+          <li><span>Number of Students:</span> 75</li>
+          <li><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</li>
+          <li><a href="preview.html" class="large button">View Trip</a></li>
         </ul>
       </div>
     </div>
@@ -70,6 +88,16 @@
       </div>
     </div>
   </section>
+  <section>
+    <div class="row">
+      <div class="large-9 columns">
+        <h4>Midwest Regional Junior Model UN Competition</h4>
+      </div>
+      <div class="large-3 columns">
+        <a href="#" class="large button">View History</a>
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="row">
       <div class="medium- 12 large-12 columns text-center">
@@ -77,7 +105,8 @@
       </div>
     </div>
   </footer>
-     <script src="bower_components/jquery/dist/jquery.min.js"><script>
+  </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>

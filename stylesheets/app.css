@@ -9178,64 +9178,110 @@ footer h6, .hero-background .hero h1, .hero-background .hero h3, .search-donate 
 /* 641 px */
 /* 1024 px */
 /* line 45, ../scss/_overrides.scss */
+* {
+  font-family: "lato";
+}
+
+/* line 49, ../scss/_overrides.scss */
+a {
+  color: #slate;
+}
+
+/* line 53, ../scss/_overrides.scss */
 nav {
   height: 100px;
+  background-color: #fff;
 }
-/* line 47, ../scss/_overrides.scss */
+/* line 56, ../scss/_overrides.scss */
 nav img {
   margin-top: 10px;
   margin-left: 25px;
 }
-/* line 51, ../scss/_overrides.scss */
+/* line 60, ../scss/_overrides.scss */
 nav ul {
   display: inline;
   list-style: none;
   float: right;
   margin-top: 30px;
 }
-/* line 56, ../scss/_overrides.scss */
+/* line 65, ../scss/_overrides.scss */
 nav ul li {
   text-align: center;
   display: inline;
   font-family: "lato";
   font-size: 16px;
+  color: #4A4A4A;
   padding-right: 30px;
 }
-/* line 62, ../scss/_overrides.scss */
+/* line 72, ../scss/_overrides.scss */
 nav ul li .button {
   background-color: #4A4A4A;
 }
-/* line 64, ../scss/_overrides.scss */
+/* line 74, ../scss/_overrides.scss */
 nav ul li .button:hover {
   background-color: #4A4A4A;
 }
 
-/* line 72, ../scss/_overrides.scss */
+@media (min-width: 1025px) {
+  /* line 83, ../scss/_overrides.scss */
+  .right-off-canvas-toggle {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  /* line 89, ../scss/_overrides.scss */
+  .right-off-canvas-toggle {
+    float: right;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: #4A4A4A;
+  }
+
+  /* line 97, ../scss/_overrides.scss */
+  nav ul {
+    display: none;
+  }
+}
+/* line 104, ../scss/_overrides.scss */
+.right-off-canvas-menu ul {
+  list-style: none;
+}
+/* line 106, ../scss/_overrides.scss */
+.right-off-canvas-menu ul li {
+  text-align: center;
+  font-size: 18px;
+  font-family: "lato";
+  color: #fff;
+  margin-top: 15px;
+}
+
+/* line 116, ../scss/_overrides.scss */
 footer {
   background-color: #4A4A4A;
   height: 75px;
 }
 @media (max-width: 40em) {
-  /* line 72, ../scss/_overrides.scss */
+  /* line 116, ../scss/_overrides.scss */
   footer {
     height: 90px;
   }
 }
-/* line 79, ../scss/_overrides.scss */
+/* line 123, ../scss/_overrides.scss */
 footer h6 {
   color: rgba(255, 255, 255, 0.69);
   margin-top: 10px;
 }
 
 /* MAIN - Navigation and Hero */
-/* line 88, ../scss/_overrides.scss */
+/* line 132, ../scss/_overrides.scss */
 .hero-background {
   height: 925px;
   background-image: url("../images/japan.png");
   background-size: cover;
 }
 @media (max-width: 40em) {
-  /* line 88, ../scss/_overrides.scss */
+  /* line 132, ../scss/_overrides.scss */
   .hero-background {
     height: 650px;
     background-image: url("../images/pisa.jpg");
@@ -9243,7 +9289,7 @@ footer h6 {
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 88, ../scss/_overrides.scss */
+  /* line 132, ../scss/_overrides.scss */
   .hero-background {
     height: 800px;
     background-image: url("../images/brandenburg.jpg");
@@ -9251,73 +9297,73 @@ footer h6 {
     background-size: cover;
   }
 }
-/* line 104, ../scss/_overrides.scss */
+/* line 148, ../scss/_overrides.scss */
 .hero-background .nav-left {
   margin-top: 35px;
 }
 @media (max-width: 40em) {
-  /* line 104, ../scss/_overrides.scss */
+  /* line 148, ../scss/_overrides.scss */
   .hero-background .nav-left {
     display: none;
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 104, ../scss/_overrides.scss */
+  /* line 148, ../scss/_overrides.scss */
   .hero-background .nav-left {
     display: none;
   }
 }
-/* line 114, ../scss/_overrides.scss */
+/* line 158, ../scss/_overrides.scss */
 .hero-background .nav-center {
   margin-top: 10px;
 }
-/* line 118, ../scss/_overrides.scss */
+/* line 162, ../scss/_overrides.scss */
 .hero-background .nav-right {
   margin-top: 30px;
 }
 @media (max-width: 40em) {
-  /* line 118, ../scss/_overrides.scss */
+  /* line 162, ../scss/_overrides.scss */
   .hero-background .nav-right {
     display: block;
     text-align: center;
     margin-top: 20px;
   }
-  /* line 124, ../scss/_overrides.scss */
+  /* line 168, ../scss/_overrides.scss */
   .hero-background .nav-right ul > li:nth-child(1) {
     display: none;
   }
-  /* line 127, ../scss/_overrides.scss */
+  /* line 171, ../scss/_overrides.scss */
   .hero-background .nav-right a {
     padding: 10px 40px;
     font-size: 18px;
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 133, ../scss/_overrides.scss */
+  /* line 177, ../scss/_overrides.scss */
   .hero-background .nav-right ul {
     display: block;
     float: right;
     margin-top: auto;
   }
 }
-/* line 141, ../scss/_overrides.scss */
+/* line 185, ../scss/_overrides.scss */
 .hero-background .navbar {
   height: 90px;
   background-color: rgba(255, 255, 255, 0.69);
 }
 @media (max-width: 40em) {
-  /* line 141, ../scss/_overrides.scss */
+  /* line 185, ../scss/_overrides.scss */
   .hero-background .navbar {
     height: 160px;
   }
 }
-/* line 150, ../scss/_overrides.scss */
+/* line 194, ../scss/_overrides.scss */
 .hero-background ul {
   display: inline;
   list-style: none;
   margin-top: 50px;
 }
-/* line 155, ../scss/_overrides.scss */
+/* line 199, ../scss/_overrides.scss */
 .hero-background ul li {
   text-align: center;
   display: inline;
@@ -9325,15 +9371,15 @@ footer h6 {
   font-size: 16px;
   padding-right: 20px;
 }
-/* line 162, ../scss/_overrides.scss */
+/* line 206, ../scss/_overrides.scss */
 .hero-background ul li a {
   background-color: #87C145;
 }
-/* line 164, ../scss/_overrides.scss */
+/* line 208, ../scss/_overrides.scss */
 .hero-background ul li a:hover {
   background-color: #6d9e35;
 }
-/* line 172, ../scss/_overrides.scss */
+/* line 216, ../scss/_overrides.scss */
 .hero-background .hero h1 {
   font-size: 55px;
   text-shadow: 2px 2px #4A4A4A;
@@ -9343,18 +9389,18 @@ footer h6 {
   margin-right: auto;
 }
 @media (max-width: 40em) {
-  /* line 172, ../scss/_overrides.scss */
+  /* line 216, ../scss/_overrides.scss */
   .hero-background .hero h1 {
     display: none;
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 172, ../scss/_overrides.scss */
+  /* line 216, ../scss/_overrides.scss */
   .hero-background .hero h1 {
     margin-top: 150px;
   }
 }
-/* line 188, ../scss/_overrides.scss */
+/* line 232, ../scss/_overrides.scss */
 .hero-background .hero h3 {
   font-size: 25px;
   font-weight: 300;
@@ -9362,7 +9408,7 @@ footer h6 {
   text-shadow: 2px 2px 8px #4A4A4A;
 }
 @media (max-width: 40em) {
-  /* line 188, ../scss/_overrides.scss */
+  /* line 232, ../scss/_overrides.scss */
   .hero-background .hero h3 {
     font-size: 24px;
     font-weight: 400;
@@ -9371,111 +9417,111 @@ footer h6 {
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 188, ../scss/_overrides.scss */
+  /* line 232, ../scss/_overrides.scss */
   .hero-background .hero h3 {
     max-width: 80%;
     margin: 25px auto;
     font-weight: 400;
   }
 }
-/* line 207, ../scss/_overrides.scss */
+/* line 251, ../scss/_overrides.scss */
 .hero-background .hero .cta-works {
   background-color: #4A90E2;
 }
-/* line 209, ../scss/_overrides.scss */
+/* line 253, ../scss/_overrides.scss */
 .hero-background .hero .cta-works:hover {
   background-color: #2275d7;
 }
-/* line 213, ../scss/_overrides.scss */
+/* line 257, ../scss/_overrides.scss */
 .hero-background .hero .cta-search {
   background-color: #9822C0;
 }
-/* line 215, ../scss/_overrides.scss */
+/* line 259, ../scss/_overrides.scss */
 .hero-background .hero .cta-search:hover {
   background-color: #761a95;
 }
 
 /* MAIN - Search and Donate */
-/* line 223, ../scss/_overrides.scss */
+/* line 267, ../scss/_overrides.scss */
 .search-donate {
   height: 1200px;
 }
-/* line 228, ../scss/_overrides.scss */
+/* line 272, ../scss/_overrides.scss */
 .search-donate h2 span {
   font-family: 'ff-market-web';
 }
-/* line 232, ../scss/_overrides.scss */
+/* line 276, ../scss/_overrides.scss */
 .search-donate a {
   background-color: #9822C0;
 }
-/* line 235, ../scss/_overrides.scss */
+/* line 279, ../scss/_overrides.scss */
 .search-donate h4 {
   font-family: "lato";
   margin-top: 25px;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 235, ../scss/_overrides.scss */
+  /* line 279, ../scss/_overrides.scss */
   .search-donate h4 {
     text-align: center;
   }
 }
 @media (max-width: 40em) {
-  /* line 235, ../scss/_overrides.scss */
+  /* line 279, ../scss/_overrides.scss */
   .search-donate h4 {
     font-size: 20px;
     text-align: center;
   }
 }
-/* line 246, ../scss/_overrides.scss */
+/* line 290, ../scss/_overrides.scss */
 .search-donate h5 {
   font-family: "lato";
   font-weight: 300;
 }
 @media (max-width: 40em) {
-  /* line 246, ../scss/_overrides.scss */
+  /* line 290, ../scss/_overrides.scss */
   .search-donate h5 {
     text-align: center;
   }
 }
-/* line 253, ../scss/_overrides.scss */
+/* line 297, ../scss/_overrides.scss */
 .search-donate .grade {
   text-align: right;
 }
-/* line 257, ../scss/_overrides.scss */
+/* line 301, ../scss/_overrides.scss */
 .search-donate .caption h6 {
   background-color: rgba(255, 255, 255, 0.69);
   padding: 10px;
   color: #4A4A4A;
   font-weight: 700;
 }
-/* line 264, ../scss/_overrides.scss */
+/* line 308, ../scss/_overrides.scss */
 .search-donate .post-1 {
   background: url("../images/capitol.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 270, ../scss/_overrides.scss */
+/* line 314, ../scss/_overrides.scss */
 .search-donate .post-2 {
   background: url("../images/musicnotes.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 276, ../scss/_overrides.scss */
+/* line 320, ../scss/_overrides.scss */
 .search-donate .post-3 {
   background: url("../images/shinto.png");
   background-size: cover;
   background-position: fixed;
   height: 250px;
 }
-/* line 284, ../scss/_overrides.scss */
+/* line 328, ../scss/_overrides.scss */
 .search-donate .post-description a {
   background-color: #fff;
   color: #F68B03;
   font-weight: 400;
 }
-/* line 291, ../scss/_overrides.scss */
+/* line 335, ../scss/_overrides.scss */
 .search-donate .category {
   height: 250px;
   padding-top: 35%;
@@ -9484,7 +9530,7 @@ footer h6 {
   font-size: 25px;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 291, ../scss/_overrides.scss */
+  /* line 335, ../scss/_overrides.scss */
   .search-donate .category {
     height: 125px;
     padding: 15% 5%;
@@ -9492,40 +9538,40 @@ footer h6 {
   }
 }
 @media (max-width: 40em) {
-  /* line 291, ../scss/_overrides.scss */
+  /* line 335, ../scss/_overrides.scss */
   .search-donate .category {
     height: 125px;
     padding: 15% 5%;
     font-size: 20px;
   }
 }
-/* line 310, ../scss/_overrides.scss */
+/* line 354, ../scss/_overrides.scss */
 .search-donate .state {
   background-color: #87C145;
 }
-/* line 312, ../scss/_overrides.scss */
+/* line 356, ../scss/_overrides.scss */
 .search-donate .state:hover {
   background-color: #6d9e35;
 }
-/* line 317, ../scss/_overrides.scss */
+/* line 361, ../scss/_overrides.scss */
 .search-donate .international {
   background-color: #4A90E2;
 }
-/* line 319, ../scss/_overrides.scss */
+/* line 363, ../scss/_overrides.scss */
 .search-donate .international:hover {
   background-color: #2275d7;
 }
-/* line 324, ../scss/_overrides.scss */
+/* line 368, ../scss/_overrides.scss */
 .search-donate .local {
   background-color: #9822C0;
 }
-/* line 326, ../scss/_overrides.scss */
+/* line 370, ../scss/_overrides.scss */
 .search-donate .local:hover {
   background-color: #761a95;
 }
 
 /* MAIN - Donation / Contributions Summary */
-/* line 333, ../scss/_overrides.scss */
+/* line 377, ../scss/_overrides.scss */
 .donations-info {
   height: 400px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #4a90e2), color-stop(21%, #4a90e2), color-stop(22%, rgba(74, 144, 226, 0.99)), color-stop(100%, rgba(255, 255, 255, 0)));
@@ -9535,7 +9581,7 @@ footer h6 {
   margin-bottom: 200px;
 }
 @media (max-width: 40em) {
-  /* line 333, ../scss/_overrides.scss */
+  /* line 377, ../scss/_overrides.scss */
   .donations-info {
     float: left;
     margin-top: 75px;
@@ -9543,148 +9589,148 @@ footer h6 {
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 333, ../scss/_overrides.scss */
+  /* line 377, ../scss/_overrides.scss */
   .donations-info {
     float: left;
     margin-top: 75px;
   }
 }
-/* line 348, ../scss/_overrides.scss */
+/* line 392, ../scss/_overrides.scss */
 .donations-info h2 {
   color: #fff;
 }
-/* line 351, ../scss/_overrides.scss */
+/* line 395, ../scss/_overrides.scss */
 .donations-info h2 span {
   font-family: "ff-market-web";
 }
 @media (max-width: 40em) {
-  /* line 348, ../scss/_overrides.scss */
+  /* line 392, ../scss/_overrides.scss */
   .donations-info h2 {
     font-size: 35px;
   }
 }
-/* line 359, ../scss/_overrides.scss */
+/* line 403, ../scss/_overrides.scss */
 .donations-info h4 {
   text-align: center;
   font-weight: 700;
   font-size: 2.75em;
   color: #4A4A4A;
 }
-/* line 366, ../scss/_overrides.scss */
+/* line 410, ../scss/_overrides.scss */
 .donations-info p {
   text-align: center;
   font-weight: 300;
   font-size: 1.25em;
 }
 
-/* line 373, ../scss/_overrides.scss */
+/* line 417, ../scss/_overrides.scss */
 .donations-footer {
   background: url("../images/mapiconcollage.svg");
   height: 200px;
 }
 
 /* MAIN - How it Works Section */
-/* line 379, ../scss/_overrides.scss */
+/* line 423, ../scss/_overrides.scss */
 .how-works {
   height: 550px;
 }
 @media (max-width: 40em) {
-  /* line 379, ../scss/_overrides.scss */
+  /* line 423, ../scss/_overrides.scss */
   .how-works {
     margin-top: 150px;
   }
 }
-/* line 385, ../scss/_overrides.scss */
+/* line 429, ../scss/_overrides.scss */
 .how-works img {
   position: absolute;
   margin-top: -400px;
 }
 @media (max-width: 40em) {
-  /* line 385, ../scss/_overrides.scss */
+  /* line 429, ../scss/_overrides.scss */
   .how-works img {
     display: none;
   }
 }
-/* line 393, ../scss/_overrides.scss */
+/* line 437, ../scss/_overrides.scss */
 .how-works .student {
   position: relative;
   float: right;
 }
-/* line 397, ../scss/_overrides.scss */
+/* line 441, ../scss/_overrides.scss */
 .how-works h2 {
   margin-bottom: 10px;
 }
 @media (max-width: 40em) {
-  /* line 397, ../scss/_overrides.scss */
+  /* line 441, ../scss/_overrides.scss */
   .how-works h2 {
     font-size: 35px;
   }
 }
-/* line 405, ../scss/_overrides.scss */
+/* line 449, ../scss/_overrides.scss */
 .how-works h3, .how-works p {
   text-align: center;
   max-width: 40%;
   margin: auto;
 }
 @media (max-width: 40em) {
-  /* line 405, ../scss/_overrides.scss */
+  /* line 449, ../scss/_overrides.scss */
   .how-works h3, .how-works p {
     max-width: 85%;
   }
 }
-/* line 414, ../scss/_overrides.scss */
+/* line 458, ../scss/_overrides.scss */
 .how-works h3 {
   margin-top: 35px;
 }
 
 /* MAIN - How it Works Call to Action */
-/* line 420, ../scss/_overrides.scss */
+/* line 464, ../scss/_overrides.scss */
 .start {
   height: 450px;
 }
-/* line 423, ../scss/_overrides.scss */
+/* line 467, ../scss/_overrides.scss */
 .start h2 {
   font-family: "ff-market-web";
   font-size: 3em;
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 431, ../scss/_overrides.scss */
+/* line 475, ../scss/_overrides.scss */
 .start .teacher-btn {
   background-color: #87C145;
 }
-/* line 433, ../scss/_overrides.scss */
+/* line 477, ../scss/_overrides.scss */
 .start .teacher-btn:hover {
   background-color: #6d9e35;
 }
-/* line 437, ../scss/_overrides.scss */
+/* line 481, ../scss/_overrides.scss */
 .start .teacher-btn p {
   font-size: 25px;
   padding: 10px 0 10px 0;
 }
-/* line 444, ../scss/_overrides.scss */
+/* line 488, ../scss/_overrides.scss */
 .start .donor-btn {
   background-color: #9822C0;
 }
-/* line 446, ../scss/_overrides.scss */
+/* line 490, ../scss/_overrides.scss */
 .start .donor-btn:hover {
   background-color: #761a95;
 }
-/* line 450, ../scss/_overrides.scss */
+/* line 494, ../scss/_overrides.scss */
 .start .donor-btn p {
   font-size: 25px;
   padding: 10px 0 10px 0;
 }
 
 /* MAIN - Footer and End Hero Section */
-/* line 459, ../scss/_overrides.scss */
+/* line 503, ../scss/_overrides.scss */
 .end-hero {
   height: 800px;
   background: url("../images/grandcentral.jpeg");
   background-size: cover;
 }
 @media (max-width: 40em) {
-  /* line 459, ../scss/_overrides.scss */
+  /* line 503, ../scss/_overrides.scss */
   .end-hero {
     height: 750px;
     float: left;
@@ -9694,7 +9740,7 @@ footer h6 {
   }
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  /* line 459, ../scss/_overrides.scss */
+  /* line 503, ../scss/_overrides.scss */
   .end-hero {
     height: 800px;
     float: left;
@@ -9704,242 +9750,385 @@ footer h6 {
   }
 }
 @media (min-width: 40.063em) and (max-width: 735px) {
-  /* line 459, ../scss/_overrides.scss */
+  /* line 503, ../scss/_overrides.scss */
   .end-hero {
     height: 790px;
   }
 }
-/* line 481, ../scss/_overrides.scss */
+/* line 525, ../scss/_overrides.scss */
 .end-hero h2 {
   text-shadow: 2px 2px 8px #fff;
   margin-top: 150px;
   margin-bottom: 0;
 }
-/* line 486, ../scss/_overrides.scss */
+/* line 530, ../scss/_overrides.scss */
 .end-hero h2 span {
   font-family: "ff-market-web";
 }
 @media (max-width: 40em) {
-  /* line 481, ../scss/_overrides.scss */
+  /* line 525, ../scss/_overrides.scss */
   .end-hero h2 {
     font-size: 35px;
     color: #fff;
     text-shadow: 2px 2px #4A4A4A;
   }
 }
-/* line 497, ../scss/_overrides.scss */
+/* line 541, ../scss/_overrides.scss */
 .end-hero h4 {
   font-family: "ff-market-web";
   font-size: 35px;
 }
 @media (max-width: 40em) {
-  /* line 497, ../scss/_overrides.scss */
+  /* line 541, ../scss/_overrides.scss */
   .end-hero h4 {
     color: #fff;
   }
 }
-/* line 505, ../scss/_overrides.scss */
+/* line 549, ../scss/_overrides.scss */
 .end-hero .footer-navbar {
   background-color: rgba(255, 255, 255, 0.69);
   height: 175px;
   margin-top: 260px;
 }
 @media (max-width: 40em) {
-  /* line 505, ../scss/_overrides.scss */
+  /* line 549, ../scss/_overrides.scss */
   .end-hero .footer-navbar {
     margin-top: 25%;
     height: 225px;
   }
-  /* line 512, ../scss/_overrides.scss */
+  /* line 556, ../scss/_overrides.scss */
   .end-hero .footer-navbar ul {
     display: inline;
   }
-  /* line 514, ../scss/_overrides.scss */
+  /* line 558, ../scss/_overrides.scss */
   .end-hero .footer-navbar ul li {
     display: inline;
     font-size: 16px;
   }
-  /* line 518, ../scss/_overrides.scss */
+  /* line 562, ../scss/_overrides.scss */
   .end-hero .footer-navbar ul li:not(:first-child) {
     padding-left: 2%;
   }
-  /* line 521, ../scss/_overrides.scss */
+  /* line 565, ../scss/_overrides.scss */
   .end-hero .footer-navbar ul .foot-div {
     margin-top: 25px;
   }
 }
-/* line 528, ../scss/_overrides.scss */
+/* line 572, ../scss/_overrides.scss */
 .end-hero .footer-navbar img {
   margin-top: 25px;
 }
 @media (max-width: 40em) {
-  /* line 528, ../scss/_overrides.scss */
+  /* line 572, ../scss/_overrides.scss */
   .end-hero .footer-navbar img {
     margin-bottom: 25px;
   }
 }
-/* line 535, ../scss/_overrides.scss */
+/* line 579, ../scss/_overrides.scss */
 .end-hero .footer-navbar ul {
   list-style: none;
   margin-top: 50px;
 }
-/* line 538, ../scss/_overrides.scss */
+/* line 582, ../scss/_overrides.scss */
 .end-hero .footer-navbar ul li:nth-child(1) {
   font-weight: 900;
 }
-/* line 543, ../scss/_overrides.scss */
+/* line 587, ../scss/_overrides.scss */
 .end-hero .copyright {
   background-color: #4A4A4A;
   height: 75px;
 }
 @media (max-width: 40em) {
-  /* line 543, ../scss/_overrides.scss */
+  /* line 587, ../scss/_overrides.scss */
   .end-hero .copyright {
     height: 90px;
   }
 }
-/* line 550, ../scss/_overrides.scss */
+/* line 594, ../scss/_overrides.scss */
 .end-hero .copyright h6 {
   color: rgba(255, 255, 255, 0.69);
   margin-top: 25px;
 }
 
-/* line 559, ../scss/_overrides.scss */
+/* line 603, ../scss/_overrides.scss */
 .welcome-info {
   height: 500px;
   background: url("../images/louvre.jpeg");
   background-position: bottom center;
 }
-/* line 563, ../scss/_overrides.scss */
+@media (min-width: 40.063em) and (max-width: 64em) {
+  /* line 603, ../scss/_overrides.scss */
+  .welcome-info {
+    height: 350px;
+    background-size: cover;
+    background: url("../images/venice.jpeg");
+    background-position: bottom;
+  }
+}
+@media (max-width: 40em) {
+  /* line 603, ../scss/_overrides.scss */
+  .welcome-info {
+    height: 300px;
+    background-size: cover;
+    background: url("../images/venice.jpeg");
+    background-position: bottom;
+  }
+}
+/* line 619, ../scss/_overrides.scss */
 .welcome-info .teacher-info {
   background-color: rgba(255, 255, 255, 0.69);
   padding-top: 15px;
   padding-bottom: 15px;
 }
-/* line 568, ../scss/_overrides.scss */
+/* line 623, ../scss/_overrides.scss */
+.welcome-info .teacher-info a {
+  float: right;
+  margin-top: 35px;
+  margin-right: 25px;
+  background-color: #87C145;
+}
+/* line 628, ../scss/_overrides.scss */
+.welcome-info .teacher-info a:hover {
+  background-color: #6d9e35;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  /* line 634, ../scss/_overrides.scss */
+  .welcome-info .teacher-info ul li:nth-child(odd) {
+    display: none;
+  }
+  /* line 638, ../scss/_overrides.scss */
+  .welcome-info .teacher-info a {
+    margin-top: 5px;
+    display: initial;
+  }
+}
+@media (max-width: 40em) {
+  /* line 644, ../scss/_overrides.scss */
+  .welcome-info .teacher-info ul {
+    display: block;
+    margin-left: 17%;
+  }
+  /* line 647, ../scss/_overrides.scss */
+  .welcome-info .teacher-info ul li:nth-child(odd) {
+    display: none;
+  }
+  /* line 651, ../scss/_overrides.scss */
+  .welcome-info .teacher-info a {
+    float: none;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+/* line 659, ../scss/_overrides.scss */
 .welcome-info ul {
   display: inline;
   margin-left: 25px;
 }
-/* line 571, ../scss/_overrides.scss */
+/* line 662, ../scss/_overrides.scss */
 .welcome-info ul li {
   display: inline;
   list-style: none;
+  font-family: "lato";
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+/* line 670, ../scss/_overrides.scss */
+.welcome-info ul li:nth-child(2) {
+  font-family: "ff-market-web";
+  font-size: 45px;
+}
+@media (max-width: 40em) {
+  /* line 670, ../scss/_overrides.scss */
+  .welcome-info ul li:nth-child(2) {
+    font-size: 35px;
+  }
 }
 
-/* line 578, ../scss/_overrides.scss */
+/* line 680, ../scss/_overrides.scss */
 .title-bar {
   height: 65px;
+  margin-bottom: 15px;
   background-color: #4A4A4A;
 }
-/* line 581, ../scss/_overrides.scss */
+/* line 684, ../scss/_overrides.scss */
 .title-bar h3 {
   font-family: "lato";
   color: #fff;
+  padding-top: 10px;
 }
 
-/* line 589, ../scss/_overrides.scss */
+/* line 691, ../scss/_overrides.scss */
+.open-trips h4 {
+  font-size: 28px;
+}
+
+/* line 695, ../scss/_overrides.scss */
+.donation-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* line 699, ../scss/_overrides.scss */
+.donation-data ul li:nth-child(1) {
+  font-size: 40px;
+}
+/* line 702, ../scss/_overrides.scss */
+.donation-data ul li {
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+/* line 706, ../scss/_overrides.scss */
+.donation-data ul span {
+  font-weight: 600;
+}
+/* line 709, ../scss/_overrides.scss */
+.donation-data ul a {
+  float: right;
+  background-color: #9822C0;
+}
+/* line 712, ../scss/_overrides.scss */
+.donation-data ul a:hover {
+  background-color: #761a95;
+}
+
+/* line 718, ../scss/_overrides.scss */
+.trip-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* line 722, ../scss/_overrides.scss */
+.trip-data ul span {
+  font-weight: 600;
+}
+/* line 725, ../scss/_overrides.scss */
+.trip-data ul a {
+  float: right;
+  background-color: #4A90E2;
+}
+/* line 728, ../scss/_overrides.scss */
+.trip-data ul a:hover {
+  background-color: #2275d7;
+}
+/* line 732, ../scss/_overrides.scss */
+.trip-data ul li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* line 739, ../scss/_overrides.scss */
+.recent-trip h4 {
+  padding-top: 20px;
+}
+/* line 742, ../scss/_overrides.scss */
+.recent-trip a {
+  float: right;
+}
+
+/* line 748, ../scss/_overrides.scss */
 .page-bar {
   background-color: #4A4A4A;
 }
-/* line 591, ../scss/_overrides.scss */
+/* line 750, ../scss/_overrides.scss */
 .page-bar h2 {
   font-family: "lato";
   color: #fff;
   margin-top: 15px;
 }
-/* line 596, ../scss/_overrides.scss */
+/* line 755, ../scss/_overrides.scss */
 .page-bar .save {
   background-color: #87C145;
 }
-/* line 598, ../scss/_overrides.scss */
+/* line 757, ../scss/_overrides.scss */
 .page-bar .save:hover {
   background-color: #6d9e35;
 }
-/* line 602, ../scss/_overrides.scss */
+/* line 761, ../scss/_overrides.scss */
 .page-bar .preview {
   background-color: #4A90E2;
 }
-/* line 604, ../scss/_overrides.scss */
+/* line 763, ../scss/_overrides.scss */
 .page-bar .preview:hover {
   background-color: #2275d7;
 }
 
-/* line 610, ../scss/_overrides.scss */
+/* line 769, ../scss/_overrides.scss */
 .trip-input {
   height: 2400px;
 }
-/* line 612, ../scss/_overrides.scss */
+/* line 771, ../scss/_overrides.scss */
 .trip-input fieldset {
   padding: 5px 20px;
 }
-/* line 614, ../scss/_overrides.scss */
+/* line 773, ../scss/_overrides.scss */
 .trip-input fieldset legend {
   font-size: 24px;
   margin-bottom: 0px;
 }
-/* line 618, ../scss/_overrides.scss */
+/* line 777, ../scss/_overrides.scss */
 .trip-input fieldset textarea {
   width: 100%;
   height: 500px;
 }
-/* line 624, ../scss/_overrides.scss */
+/* line 783, ../scss/_overrides.scss */
 .trip-input .photo-bg {
   background-color: #D8D6D6;
   height: 175px;
   margin-bottom: 10px;
 }
-/* line 628, ../scss/_overrides.scss */
+/* line 787, ../scss/_overrides.scss */
 .trip-input .photo-bg p {
   text-align: center;
   padding-top: 75px;
   color: #4A4A4A;
 }
-/* line 636, ../scss/_overrides.scss */
+/* line 795, ../scss/_overrides.scss */
 .trip-input .trip-photos textarea {
   height: 50px;
 }
-/* line 641, ../scss/_overrides.scss */
+/* line 800, ../scss/_overrides.scss */
 .trip-input a {
   background-color: #9822C0;
 }
-/* line 643, ../scss/_overrides.scss */
+/* line 802, ../scss/_overrides.scss */
 .trip-input a:hover {
   background-color: #761a95;
 }
-/* line 648, ../scss/_overrides.scss */
+/* line 807, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom {
   height: 150px;
 }
-/* line 650, ../scss/_overrides.scss */
+/* line 809, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom a {
   margin-top: 45px;
 }
-/* line 653, ../scss/_overrides.scss */
+/* line 812, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom .save {
   background-color: #87C145;
 }
-/* line 655, ../scss/_overrides.scss */
+/* line 814, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom .save:hover {
   background-color: #6d9e35;
 }
-/* line 659, ../scss/_overrides.scss */
+/* line 818, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom .preview {
   background-color: #4A90E2;
 }
-/* line 661, ../scss/_overrides.scss */
+/* line 820, ../scss/_overrides.scss */
 .trip-input .save-preview-bottom .preview:hover {
   background-color: #2275d7;
 }
 
-/* line 669, ../scss/_overrides.scss */
+/* line 828, ../scss/_overrides.scss */
 .hero-unit {
-  height: 500px;
+  height: 400px;
   background: url("../images/uscapitol.jpg");
   background-size: cover;
   background-position: center center;
 }
-/* line 674, ../scss/_overrides.scss */
+/* line 833, ../scss/_overrides.scss */
 .hero-unit h2 {
   font-family: "lato";
   text-align: left;
@@ -9948,8 +10137,190 @@ footer h6 {
   padding-left: 25px;
 }
 
-/* line 683, ../scss/_overrides.scss */
+/* line 842, ../scss/_overrides.scss */
+.campaign-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 845, ../scss/_overrides.scss */
+.campaign-info h5 {
+  font-size: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+/* line 850, ../scss/_overrides.scss */
+.campaign-info p {
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+}
+/* line 855, ../scss/_overrides.scss */
+.campaign-info h6 {
+  font-size: 24px;
+  color: #D8D6D6;
+  text-align: center;
+}
+/* line 860, ../scss/_overrides.scss */
+.campaign-info img {
+  width: 100%;
+  height: auto;
+}
+/* line 864, ../scss/_overrides.scss */
+.campaign-info span {
+  font-weight: 700;
+}
+
+/* line 869, ../scss/_overrides.scss */
 .class-photo {
-  height: 250px;
-  background-color: #D8D6D6;
+  height: 230px;
+  box-shadow: 2px 2px 8px #4A4A4A;
+  border: 10px solid #fff;
+  background: url("../images/class.jpg");
+  background-size: cover;
+}
+
+/* line 878, ../scss/_overrides.scss */
+.trip-highlights h3 {
+  font-size: 22px;
+  font-weight: 300;
+}
+/* line 882, ../scss/_overrides.scss */
+.trip-highlights ul {
+  font-size: 18px;
+  font-weight: 300;
+  list-style: none;
+}
+/* line 887, ../scss/_overrides.scss */
+.trip-highlights span {
+  font-weight: 700;
+}
+
+/* line 894, ../scss/_overrides.scss */
+.trip-summary .trip-photo-1 {
+  height: 230px;
+  box-shadow: 2px 2px 8px #4A4A4A;
+  border: 10px solid #fff;
+  background: url("../images/president.jpg");
+  background-size: cover;
+  background-position: right;
+}
+/* line 902, ../scss/_overrides.scss */
+.trip-summary .trip-photo-2 {
+  height: 230px;
+  box-shadow: 2px 2px 8px #4A4A4A;
+  border: 10px solid #fff;
+  background: url("../images/congress.jpg");
+  background-size: cover;
+}
+/* line 909, ../scss/_overrides.scss */
+.trip-summary h6 {
+  font-size: 14px;
+  font-family: "lato";
+}
+/* line 914, ../scss/_overrides.scss */
+.trip-summary aside {
+  background-color: #4A4A4A;
+  height: 775px;
+  color: #fff;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  /* line 914, ../scss/_overrides.scss */
+  .trip-summary aside {
+    height: 690px;
+  }
+}
+@media (max-width: 40em) {
+  /* line 914, ../scss/_overrides.scss */
+  .trip-summary aside {
+    height: 690px;
+  }
+}
+/* line 924, ../scss/_overrides.scss */
+.trip-summary aside h3 {
+  color: #fff;
+  text-align: center;
+  padding-top: 25px;
+}
+/* line 930, ../scss/_overrides.scss */
+.trip-summary aside .donate-cta ul {
+  list-style: none;
+  font-size: 18px;
+}
+/* line 933, ../scss/_overrides.scss */
+.trip-summary aside .donate-cta ul li:nth-child(2) {
+  font-weight: 300;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  /* line 933, ../scss/_overrides.scss */
+  .trip-summary aside .donate-cta ul li:nth-child(2) {
+    text-align: center;
+  }
+}
+/* line 939, ../scss/_overrides.scss */
+.trip-summary aside .donate-cta ul a {
+  display: block;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  background-color: #87C145;
+}
+/* line 946, ../scss/_overrides.scss */
+.trip-summary aside .donate-cta ul a:hover {
+  background-color: #6d9e35;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  /* line 939, ../scss/_overrides.scss */
+  .trip-summary aside .donate-cta ul a {
+    width: 70%;
+    margin: 5px auto;
+  }
+}
+/* line 954, ../scss/_overrides.scss */
+.trip-summary aside .donate-cta ul .donate-custom .button {
+  font-size: 20px;
+  background-color: #87C145;
+}
+
+/* line 963, ../scss/_overrides.scss */
+.trip-itinerary span {
+  font-weight: 700;
+}
+
+/* line 969, ../scss/_overrides.scss */
+#login-bg {
+  background: url("../images/loginbg.png") no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+/* line 977, ../scss/_overrides.scss */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.69);
+  margin-top: 20%;
+  height: auto;
+}
+/* line 981, ../scss/_overrides.scss */
+.login-box h3 {
+  font-family: "ff-market-web";
+}
+/* line 984, ../scss/_overrides.scss */
+.login-box img {
+  margin-top: 20px;
+}
+/* line 987, ../scss/_overrides.scss */
+.login-box a {
+  font-family: "lato";
+  background-color: #87C145;
+}
+/* line 990, ../scss/_overrides.scss */
+.login-box a:hover {
+  background-color: #6d9e35;
+}
+/* line 994, ../scss/_overrides.scss */
+.login-box .password-forgot a {
+  color: #4A4A4A;
+  background-color: transparent;
 }

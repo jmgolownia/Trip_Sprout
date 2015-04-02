@@ -3,21 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TripSprout - Create</title>
+    <title>TripSprout - Preview</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="//use.typekit.net/ezo4cez.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+  <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <a class="right-off-canvas-toggle" href="#" >&#9776;</a>
+          <!-- Off Canvas Menu -->
+          <aside class="right-off-canvas-menu">
+            <ul>
+              <li><img src="images/rodriguez.png"></li>
+              <li>Mr. Rodriguez's TripSprout</li>
+              <a href="dashboard.html"><li>Dashboard</li></a>
+              <a href="create.html"><li>Create</li></a>
+              <li><a href="#">Manage</a></li>
+              <li><a href="#">Account</a></li>
+              <li><a href="index.html" class="small button">Logout</a></li>
+            </ul>
+          </aside>
+          <a class="exit-off-canvas"></a>
   <nav>
     <img src="images/TripSproutLogo.png">
     <ul>
-      <li>Dashboard</li>
-      <li>Create</li>
-      <li>Manage</li>
-      <li>Account</li>
-      <li><a href="#" class="small button">Logout</a></li>
+      <a href="dashboard.html"><li>Dashboard</li></a>
+      <a href="create.html"><li>Create</li></a>
+      <a href=""><li>Manage</li></a>
+      <a href=""><li>Account</li></a>
+      <li><a href="index.html" class="small button">Logout</a></li>
     </ul>
   </nav>
   <section class="page-bar">
@@ -26,8 +42,8 @@
         <h2>Preview Page</h2>
       </div>
       <div class="large-5 columns">
-        <a href="#" class="preview button">Continue Editing</a>
-        <a href="#" class="save button">Save and Exit</a>
+        <a href="create.html" class="preview button">Continue Editing</a>
+        <a href="dashboard.html" class="save button">Save and Exit</a>
       </div>
     </div>
   </section>
@@ -38,45 +54,107 @@
       </div>
     </div>
   </section>
-  <section class="class-info">
+  <section class="campaign-info">
     <div class="row">
-      <div class="large-8 columns">
-        <div class="row">
-          <div class="large-2 columns">
-            <h5>Students</h5>
-            <p>75</p>
-          </div>
-          <div class="large-1 columns">
-            <h5>Grade</h5>
-            <p>7</p>
-          </div>
-          <div class="large-3 columns">
-            <h5>Raised so far</h5>
-            <p>$2,107</p>
-            <h6>Total Cost $8,500</h6>
-          </div>
-          <div class="large-3 columns">
-            <h5>Raised so far</h5>
-            <p>$2,107</p>
-            <h6>Total Cost $8,500</h6>
-          </div>
-          <div class="large-3 columns">
-            <h5>To reach our goal</h5>
-            <p>$6,393</p>
-            <h6>39 Days Remaining</h6>
-          </div>
+      <div class="large-12 columns">
+        <div class="small-12 medium-6 large-3 columns">
+          <h5>Raised so far</h5>
+          <p>$2,107</p>
+          <h6>Total Cost $8,500</h6>
         </div>
-        <h4>Mr. Rodriguez | Parkview Middle School, Minneapolis MN</h4>
-      </div>
-      <div class="large-4 columns">
-        <div class="class-photo">
-          <p>Your Class Photo</p>
+        <div class="small-12 medium-6 large-3 columns">
+          <img src="images/goalpiechart.png">
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+          <h5>We still need</h5>
+          <p><span>$6,393</span></p>
+          <h6>39 Days Remaining</h6>
+        </div>
+        <div class="small-6 medium-3 large-1 columns">
+          <h5>Grade</h5>
+          <p>7</p>
+        </div>
+        <div class="small-6 medium-3 large-2 columns">
+          <h5>Students</h5>
+          <p>75</p>
         </div>
       </div>
     </div>
   </section>
-
-
+  <section class="trip-highlights">
+    <div class="row">
+      <div class="large-7 columns">
+        <h3><span>Mr. Rodriguez</span> | Parkview Middle School, Minneapolis MN </h3>
+        <hr>
+        <ul>
+          <li><span>Complete our simulation with a visit to capitol hill</span></li>
+          <li><span>Destination:</span> Washington D.C.</li>
+          <li><span>Highlights:</span> A special tour of the White House and Congress, meeting with our MN State Senator, ans visiting the Spy exhibit at the Newseum!</li>
+        </ul>
+        <hr>
+      </div>
+      <div class="large-5 columns">
+        <div class="class-photo">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="trip-summary">
+    <div class="row">
+      <div class="large-8 columns">
+        <p>Now that my eighth-graders have written bills and debated like congress, I want them to see capitol hill in action! Our class worked together to create our trip, but we need help getting to Washington! Many of my students qualify for free and reduced lunch and their families just don't have the extra income to help their children pay for travel expenses. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
+        <div class="row">
+          <div class="medium-6 large-6 columns">
+            <div class="trip-photo-1">
+            </div>
+            <h6>My students have a chance to meet with the President or First Lady during our visit!</h6>
+          </div>
+          <div class="medium-6 large-6 columns">
+            <div class="trip-photo-2">
+            </div>
+            <h6>We've all been invited to sit in the gallery during a live session of congress in the House of Representatives</h6>
+          </div>
+        </div>
+      </div>
+      <aside class="large-4 columns">
+        <h3>Donate to support us!</h3>
+        <div class="donate-cta">
+          <ul>
+            <li><a href="#" class="button">$20</a></li>
+            <li>Give $20 to send 1 student to the White House and U.S. Capitol</li>
+          </ul>
+          <ul>
+            <li><a href="#" class="button">$40</a></li>
+            <li>Give $40 to help 2 students meet and interview their state senator</p></li>
+          </ul>
+          <ul>
+            <li><a href="#" class="button">$100</a></li>
+            <li>Give $100 to secure a hotel room for 4 students in Washington D.C.</li>
+          </ul>
+          <ul>
+            <li><a href="#" class="button">$175</a></li>
+            <li>Give $175 to pay for rountrip airfare for 2 underprivileged students</li>
+          </ul>
+          <ul>
+            <li><a href="#" class="button">$_____</a></li>
+            <li><input type="text" placeholder="Give another amount to our students"></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section class="trip-itinerary">
+    <div class="row">
+      <div class="large-8 columns">
+        <p><span>Wednesday:</span> Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. </p>
+        <p><span>Thursday:</span> Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. </p>
+        <p><span>Friday:</span> Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. </p>
+        <p><span>Saturday:</span> Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. </p>
+        <p><span>Sunday:</span> Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius. </p>
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="row">
       <div class="medium- 12 large-12 columns text-center">
@@ -84,7 +162,8 @@
       </div>
     </div>
   </footer>
-     <script src="bower_components/jquery/dist/jquery.min.js"><script>
+  </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>

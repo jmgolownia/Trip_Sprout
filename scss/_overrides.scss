@@ -42,8 +42,17 @@ $tablet-max: 64em; /* 1024 px */
 }
 
 //SHARED PAGE STYLES
+* {
+  font-family: $primary-font;
+}
+
+a {
+  color: #slate;
+}
+
 nav {
   height: 100px;
+  background-color: #fff;
   img {
     margin-top: 10px;
     margin-left: 25px; 
@@ -58,6 +67,7 @@ nav {
       display: inline;
       font-family: $primary-font;
       font-size: 16px;
+      color: $slate;
       padding-right: 30px;
     .button {
         background-color: $slate;
@@ -65,6 +75,40 @@ nav {
           background-color: $slate;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .right-off-canvas-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-off-canvas-toggle {
+    float: right;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: $slate;
+  }
+  nav {
+    ul {
+      display: none;
+    }
+  }
+}
+
+.right-off-canvas-menu {
+  ul {
+    list-style: none;
+    li {
+      text-align: center;
+      font-size: 18px;
+      font-family: $primary-font;
+      color: #fff;
+      margin-top: 15px;
     }
   }
 }
@@ -560,10 +604,57 @@ footer {
   height: 500px;
   background: url('../images/louvre.jpeg');
   background-position: bottom center;
+  @include tablet {
+    height: 350px;
+    background-size: cover;
+    background: url('../images/venice.jpeg');
+    background-position: bottom;
+  }
+  @include mobile {
+    height: 300px;
+    background-size: cover;
+    background: url('../images/venice.jpeg');
+    background-position: bottom;
+  }
   .teacher-info {
     background-color: $navbar-bg;
     padding-top: 15px;
     padding-bottom: 15px;
+    a {
+      float: right;
+      margin-top: 35px;
+      margin-right: 25px;
+      background-color: $green;
+      &:hover{
+        background-color: darken($green, 10%);
+      }
+    }
+    @include tablet {
+      ul {
+        li:nth-child(odd) {
+          display: none;
+        }
+      }
+      a {
+        margin-top: 5px;
+        display: initial;
+      }
+    }
+    @include mobile {
+      ul {
+        display: block;
+        margin-left: 17%;
+        li:nth-child(odd) {
+          display: none;
+        }
+      }
+      a {
+        float: none;
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
   }
     ul {
       display: inline;
@@ -571,19 +662,87 @@ footer {
       li {
         display: inline;
         list-style: none;
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 400;
+        margin-right: 20px;
+      }
+      li:nth-child(2) {
+        font-family: $alt-font;
+        font-size: 45px;
+        @include mobile {
+          font-size: 35px;
+        }
       }
     }
   }
 
 .title-bar {
   height: 65px;
+  margin-bottom: 15px;
   background-color: $slate;
   h3 {
     font-family: $primary-font;
     color: #fff;
+    padding-top: 10px;
   }
 }
 
+.open-trips h4 {
+  font-size: 28px;
+}
+
+.donation-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  li:nth-child(1) {
+    font-size: 40px;
+  }
+  li {
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+  span {
+    font-weight: 600;
+  }
+  a {
+    float: right;
+    background-color: $purple;
+    &:hover{
+      background-color: darken($purple, 10%);
+    }
+  }
+}
+
+.trip-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  span {
+    font-weight: 600;
+  }
+  a {
+    float: right;
+    background-color: $blue;
+    &:hover{
+      background-color: darken($blue, 10%);
+    }
+  }
+  li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.recent-trip {
+  h4 {
+    padding-top: 20px;
+  }
+  a {
+    float: right;
+  }
+}
 
 //CREATE TRIP PAGE STYLES
 .page-bar {
@@ -667,7 +826,7 @@ footer {
 
 //PREVIEW AND VIEW PAGE STYLES
 .hero-unit {
-  height: 500px;
+  height: 400px;
   background: url('../images/uscapitol.jpg');
   background-size: cover;
   background-position: center center;
@@ -680,10 +839,165 @@ footer {
   }
 }
 
-.class-photo {
-  height: 250px;
-  background-color: $gray;
+.campaign-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h5 {
+    font-size: 24px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  p {
+    font-size: 45px;
+    font-weight: 300;
+    text-align: center;
+  }
+  h6 {
+    font-size: 24px;
+    color: $gray;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  span {
+    font-weight: 700;
+  }
 }
+
+.class-photo {
+  height: 230px;
+  box-shadow: 2px 2px 8px $slate;
+  border: 10px solid #fff;
+  background: url('../images/class.jpg');
+  background-size: cover;
+}
+
+.trip-highlights {
+  h3 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  ul {
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.trip-summary {
+
+  .trip-photo-1 {
+          height: 230px;
+          box-shadow: 2px 2px 8px $slate;
+          border: 10px solid #fff;
+          background: url('../images/president.jpg');
+          background-size: cover;
+          background-position: right;
+        }
+  .trip-photo-2 {
+          height: 230px;
+          box-shadow: 2px 2px 8px $slate;
+          border: 10px solid #fff;
+          background: url('../images/congress.jpg');
+          background-size: cover;
+        }
+  h6 {
+    font-size: 14px;
+    font-family: $primary-font;
+  }
+
+  aside {
+    background-color: $slate;
+    height: 775px;
+    color: #fff;
+    @include tablet {
+      height: 690px;
+    }
+    @include mobile {
+      height: 690px;
+    }
+    h3 {
+      color: #fff;
+      text-align: center;
+      padding-top: 25px;
+    }
+    .donate-cta {
+      ul {
+        list-style: none;
+        font-size: 18px;
+          li:nth-child(2) {
+            font-weight: 300;
+            @include tablet {
+              text-align: center;
+            }
+          }
+          a {
+            display: block;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 24px;
+            background-color: $green;
+            &:hover {
+              background-color: darken($green, 10%);
+            }
+            @include tablet {
+              width: 70%;
+              margin: 5px auto;
+            }
+          }
+      .donate-custom .button { 
+          font-size: 20px;
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+  .trip-itinerary {
+    span {
+      font-weight: 700;
+    }
+  }
+
+//LOGIN AND SIGNUP PAGE
+#login-bg {
+  background: url('../images/loginbg.png') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.login-box {
+  background-color: $navbar-bg;
+  margin-top: 20%;
+  height: auto;
+  h3 {
+    font-family: $alt-font;
+  }
+  img {
+    margin-top: 20px;
+  }
+  a {
+    font-family: $primary-font;
+    background-color: $green;
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+  }
+  .password-forgot a {
+    color: $slate;
+    background-color: transparent;
+  }
+}
+
+
 
 
 
