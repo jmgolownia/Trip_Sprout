@@ -20,6 +20,7 @@ $green: #87C145;
 $blue: #4A90E2;
 $purple: #9822C0;
 $slate: #4A4A4A;
+$lightslate: #706f6f;
 $gray: #D8D6D6;
 $navbar-bg: rgba(255, 255, 255, .69);
 
@@ -678,18 +679,36 @@ footer {
   }
 
 .title-bar {
-  height: 65px;
+  height: 50px;
   margin-bottom: 15px;
-  background-color: $slate;
+  background-color: $lightslate;
+  -webkit-box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
+  -moz-box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
+  box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
   h3 {
     font-family: $primary-font;
     color: #fff;
-    padding-top: 10px;
   }
 }
 
 .open-trips h4 {
   font-size: 28px;
+}
+
+.chart a {
+  background-color: $purple;
+  margin-left: 20px;
+  @include mobile {
+    display: block;
+  }
+  &:hover{
+    background-color: darken($purple, 10%);
+  }
+}
+
+.chart #fundingTotal {
+  margin-left: -20px;
+  margin-top: 15px;
 }
 
 .donation-data ul {
@@ -706,13 +725,6 @@ footer {
   span {
     font-weight: 600;
   }
-  a {
-    float: right;
-    background-color: $purple;
-    &:hover{
-      background-color: darken($purple, 10%);
-    }
-  }
 }
 
 .trip-data ul {
@@ -723,10 +735,12 @@ footer {
     font-weight: 600;
   }
   a {
-    float: right;
     background-color: $blue;
     &:hover{
       background-color: darken($blue, 10%);
+    }
+    @include mobile {
+      display: block;
     }
   }
   li {
@@ -978,6 +992,7 @@ footer {
   background-color: $navbar-bg;
   margin-top: 20%;
   height: auto;
+
   h3 {
     font-family: $alt-font;
   }
@@ -995,6 +1010,11 @@ footer {
     color: $slate;
     background-color: transparent;
   }
+
+  .tabs li a:nth-child(1) {
+    width: 105%;
+  }
+
 }
 
 
