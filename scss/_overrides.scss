@@ -709,6 +709,10 @@ footer {
 .chart #fundingTotal {
   margin-left: -20px;
   margin-top: 15px;
+  margin-bottom: 20px;
+  @include mobile {
+
+  }
 }
 
 .donation-data ul {
@@ -736,8 +740,12 @@ footer {
   }
   a {
     background-color: $blue;
+    margin-top: 10px;
     &:hover{
       background-color: darken($blue, 10%);
+    }
+    @include tablet {
+      margin-left: 25px;
     }
     @include mobile {
       display: block;
@@ -933,7 +941,9 @@ footer {
       height: 690px;
     }
     @include mobile {
-      height: 690px;
+      height: 775px;
+      margin-bottom: 25px;
+      margin-top: 25px;
     }
     h3 {
       color: #fff;
@@ -963,6 +973,14 @@ footer {
             @include tablet {
               width: 70%;
               margin: 5px auto;
+            }
+          }
+
+          li input {
+            max-width: 97%;
+            @include tablet {
+              max-width: 70%;
+              margin: 0 auto;
             }
           }
       .donate-custom .button { 
