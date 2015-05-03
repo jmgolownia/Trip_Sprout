@@ -63,6 +63,9 @@ nav {
     list-style: none;
     float: right;
     margin-top: 30px;
+    a:hover {
+      font-weight: 900;
+    }
     li {
       text-align: center;
       display: inline;
@@ -104,12 +107,27 @@ nav {
 .right-off-canvas-menu {
   ul {
     list-style: none;
+    a {
+      color: #fff; 
+    }
+    a:hover {
+      color: $blue;
+    }
     li {
       text-align: center;
       font-size: 18px;
       font-family: $primary-font;
       color: #fff;
-      margin-top: 15px;
+      margin-top: 20px;
+      .button {
+        margin-top: 15px;
+        background-color: #333;
+        border: 3px solid #fff;
+        &:hover {
+          color: #fff;
+          background-color: $blue;
+        }
+      }
     }
   }
 }
@@ -124,7 +142,7 @@ footer {
       h6 {
         @extend %basefont;
         color: $navbar-bg;
-        margin-top: 10px;
+        margin-top: 20px;
         }
     }
 
@@ -217,7 +235,7 @@ footer {
       h1 {
         @extend %basefont;
         font-size: 55px;
-        text-shadow: 2px 2px $slate;
+        text-shadow: 4px 4px $slate;
         display: block;
         margin-top: 215px;
         margin-left: auto;
@@ -235,6 +253,7 @@ footer {
         font-size: 25px;
         font-weight: 300;
         margin-top: 55px;
+        margin-bottom: 35px;
         text-shadow: 2px 2px 8px $slate;
           @include mobile {
             font-size: 24px;
@@ -525,7 +544,7 @@ footer {
  
     h2 {
       @extend %mainheading;
-      text-shadow: 2px 2px 8px #fff;
+      text-shadow: 4px 4px 8px #fff;
       margin-top: 150px;
       margin-bottom: 0;
         span {
@@ -549,7 +568,7 @@ footer {
 
     .footer-navbar {
       background-color: $navbar-bg;
-      height: 175px;
+      height: 200px;
       margin-top: 260px;
         @include mobile {
           margin-top: 25%;
@@ -571,8 +590,9 @@ footer {
         }
 
         img {
-          margin-top: 25px;
+          margin-top: 50px;
           @include mobile {
+            margin-top: 25px;
             margin-bottom: 25px;
           }
         }
@@ -679,7 +699,7 @@ footer {
   }
 
 .title-bar {
-  height: 50px;
+  height: 65px;
   margin-bottom: 15px;
   background-color: $lightslate;
   -webkit-box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
@@ -687,6 +707,8 @@ footer {
   box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
   h3 {
     font-family: $primary-font;
+    font-size: 30px;
+    padding-top: 5px;
     color: #fff;
   }
 }
@@ -757,9 +779,18 @@ footer {
   }
 }
 
-.recent-trip {
+.recent-trips-header {
+  padding-bottom: 10px;
+  h3 {
+    font-size: 30px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+}
+
+.recent-trips {
   h4 {
-    padding-top: 20px;
+    font-weight: 300;
   }
   a {
     float: right;
