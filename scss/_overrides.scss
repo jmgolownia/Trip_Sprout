@@ -1,0 +1,1086 @@
+//VARIABLES
+$primary-font: 'lato';
+$alt-font: 'ff-market-web';
+%basefont { 
+    font-family: $primary-font;
+    color: #fff;
+    text-align: center;}
+
+%mainheading {
+    font-family: $primary-font;
+    font-size: 2.75em;
+    color: #4A4A4A;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 45px;
+}
+
+$orange: #F68B03;
+$green: #87C145;
+$blue: #4A90E2;
+$purple: #9822C0;
+$slate: #4A4A4A;
+$lightslate: #706f6f;
+$gray: #D8D6D6;
+$navbar-bg: rgba(255, 255, 255, .69);
+
+//MEDIA QUERY VARIABLES
+
+$mobile-width: 40em; /* 640px */
+$tablet-min: 40.063em; /* 641 px */
+$tablet-max: 64em; /* 1024 px */
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) {
+    @content;
+  }
+}
+
+//SHARED PAGE STYLES
+* {
+  font-family: $primary-font;
+}
+
+a {
+  color: #slate;
+}
+
+nav {
+  height: 100px;
+  background-color: #fff;
+  img {
+    margin-top: 10px;
+    margin-left: 25px; 
+  }
+  ul {
+    display: inline;
+    list-style: none;
+    float: right;
+    margin-top: 30px;
+    a:hover {
+      font-weight: 900;
+    }
+    li {
+      text-align: center;
+      display: inline;
+      font-family: $primary-font;
+      font-size: 16px;
+      color: $slate;
+      padding-right: 30px;
+    .button {
+        background-color: $slate;
+        &:hover {
+          background-color: $slate;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .right-off-canvas-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-off-canvas-toggle {
+    float: right;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: $slate;
+  }
+  nav {
+    ul {
+      display: none;
+    }
+  }
+}
+
+.right-off-canvas-menu {
+  ul {
+    list-style: none;
+    a {
+      color: #fff; 
+    }
+    a:hover {
+      color: $blue;
+    }
+    li {
+      text-align: center;
+      font-size: 18px;
+      font-family: $primary-font;
+      color: #fff;
+      margin-top: 20px;
+      .button {
+        margin-top: 15px;
+        background-color: #333;
+        border: 3px solid #fff;
+        &:hover {
+          color: #fff;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}
+
+footer {
+    background-color: $slate;
+    height: 75px;
+      @include mobile {
+        height: 90px;
+      }
+
+      h6 {
+        @extend %basefont;
+        color: $navbar-bg;
+        margin-top: 20px;
+        }
+    }
+
+//MAIN PAGE STYLES
+/* MAIN - Navigation and Hero */
+.hero-background {
+  height: 925px;
+  background-image: url("../images/japan.png");
+  background-size: cover;
+    @include mobile {
+      height: 650px;
+      background-image: url("../images/pisa.jpg");
+      background-position: top center;
+    }
+    @include tablet {
+      height: 800px;
+      background-image: url("../images/brandenburg.jpg");
+      background-position: -200px, 0, bottom;
+      background-size: cover;
+    }
+
+    .nav-left {
+      margin-top: 35px;
+      a {
+        color: #333;
+        background-color: initial;
+        &:hover {
+          background-color: initial;
+          font-weight: 900;
+        }
+      }
+        @include mobile {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+    }
+
+    .nav-center {
+      margin-top: 10px;
+    }
+
+    .nav-right {
+      margin-top: 30px;
+        @include mobile {
+          display: block;
+          text-align: center;
+          margin-top: 20px;
+          ul > li:nth-child(1) {
+            display: none;
+          }
+          a {
+            padding: 10px 40px;
+            font-size: 18px;
+          }
+        }
+        @include tablet {
+          ul {
+            display: block;
+            float: right;
+            margin-top: auto;
+          }
+        }
+    }
+
+    .navbar {
+      height: 90px;
+      background-color: $navbar-bg;
+        @include mobile {
+        height: 160px;
+      }
+
+    }
+
+      ul {
+        display: inline;
+        list-style: none;
+        margin-top: 50px;
+
+        li {
+          text-align: center;
+          display: inline;
+          font-family: $primary-font;
+          font-size: 16px;
+          padding-right: 20px;
+          
+          a {
+          background-color: $green;
+            &:hover{
+              background-color: darken($green, 10%);
+            }
+          }
+        }
+    }
+
+    .hero {
+      h1 {
+        @extend %basefont;
+        font-size: 55px;
+        text-shadow: 4px 4px $slate;
+        display: block;
+        margin-top: 215px;
+        margin-left: auto;
+        margin-right: auto;
+          @include mobile {
+          display: none;
+          }
+          @include tablet {
+            margin-top: 150px;
+          }
+      }
+
+      h3 {
+        @extend %basefont;
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: 55px;
+        margin-bottom: 35px;
+        text-shadow: 2px 2px 8px $slate;
+          @include mobile {
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 75px;
+            margin-bottom: 50px;
+          }
+          @include tablet {
+            max-width: 80%;
+            margin: 25px auto;
+            font-weight: 400;
+          }
+      }
+
+      .cta-works {
+        background-color: $blue;
+        &:hover{
+              background-color: darken($blue, 10%);
+          }
+      }
+      .cta-search {
+        background-color: $purple;
+        &:hover{
+              background-color: darken($purple, 10%);
+          }
+        }
+    }
+  }
+
+/* MAIN - Search and Donate */
+  .search-donate {
+    height: 1200px;
+
+      h2 {
+        @extend %mainheading;
+          span {
+            font-family: 'ff-market-web';
+        }
+      }
+      a {
+        background-color: $purple;
+      }
+      h4 {
+        font-family: $primary-font;
+        margin-top: 25px;
+        @include tablet {
+          text-align: center;
+        }
+        @include mobile {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      h5 {
+        font-family: $primary-font;
+        font-weight: 300;
+        @include mobile {
+          text-align: center;
+        }
+      }
+      .grade {
+        text-align: right;
+      }
+
+      .caption h6 {
+          background-color: rgba(255, 255, 255, .69);
+          padding: 10px;
+          color: $slate;
+          font-weight: 700;
+      }
+
+      .post-1 {
+        background: url('../images/capitol.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+      .post-2 {
+        background: url('../images/musicnotes.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+      .post-3 {
+        background: url('../images/shinto.png');
+        background-size: cover;
+        background-position: fixed;
+        height: 250px;
+      }
+
+      .post-description {
+        a {
+          background-color: #fff;
+          color: $orange;
+          font-weight: 400;
+        }
+      }
+
+      .category {
+        height: 250px;
+        padding-top: 35%;
+        padding-left: 10%;
+        padding-right: 10%;
+        @extend %basefont;
+        font-size: 25px;
+          @include tablet {
+            height: 125px;
+            padding: 15% 5%;
+            font-size: 20px;
+          }
+          @include mobile {
+            height: 125px;
+            padding: 15% 5%;
+            font-size: 20px;
+          }
+      }
+
+      .state {
+        background-color: $green;
+            &:hover{
+              background-color: darken($green, 10%);
+            }
+      }
+
+      .international {
+        background-color: $blue;
+            &:hover{
+              background-color: darken($blue, 10%);
+            }
+      }
+
+      .local {
+        background-color: $purple;
+            &:hover{
+              background-color: darken($purple, 10%);
+            }
+      }
+  }
+
+/* MAIN - Donation / Contributions Summary */
+  .donations-info {
+    height: 400px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgba(74,144,226,1)), color-stop(21%,rgba(74,144,226,1)), color-stop(22%,rgba(74,144,226,0.99)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(74,144,226,1) 2%,rgba(74,144,226,1) 21%,rgba(74,144,226,0.99) 22%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    margin-bottom: 200px;
+      @include mobile {
+        float: left;
+        margin-top: 75px;
+        height: 650px;
+      }
+      @include tablet {
+        float: left;
+        margin-top: 75px;
+      }
+
+    h2 {
+      @extend %mainheading;
+      color: #fff;
+        span {
+          font-family: $alt-font;
+        }
+      @include mobile {
+        font-size: 35px;
+      }
+    }
+
+    h4 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.75em;
+      color: $slate;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.25em;
+    }
+  }
+
+  .donations-footer {
+    background: url('../images/mapiconcollage.svg');
+    height: 200px;
+  }
+
+/* MAIN - How it Works Section */
+  .how-works {
+    height: 550px;
+    @include mobile {
+      margin-top: 150px;
+    }
+
+    img {
+      position: absolute;
+      margin-top: -400px;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .student {
+      position: relative;
+      float: right;
+    }
+    h2 {
+      @extend %mainheading;
+      margin-bottom: 10px;
+      @include mobile {
+        font-size: 35px;
+      }
+    }
+
+    h3, p {
+      text-align: center;
+      max-width: 40%;
+      margin: auto;
+      @include mobile {
+        max-width: 85%;
+      }
+    }
+
+    h3 {
+      margin-top: 35px;
+    }
+  }
+
+/* MAIN - How it Works Call to Action */
+  .start {
+    height: 450px;
+    .get-started {
+      margin-top: -35px;
+    }
+
+    h2 {
+      @extend %mainheading;
+      font-family: $alt-font;
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .teacher-btn {
+      background-color: $green;
+        &:hover {
+              background-color: darken($green, 10%);
+          }
+
+        p {
+          @extend %basefont;
+          font-size: 25px;
+          padding: 10px 0 10px 0;
+        }
+    }
+
+    .donor-btn {
+      background-color: $purple;
+        &:hover {
+              background-color: darken($purple, 10%);
+          }
+
+        p {
+          @extend %basefont;
+          font-size: 25px;
+           padding: 10px 0 10px 0;
+        }
+    }
+}
+
+/* MAIN - Footer and End Hero Section */
+  .end-hero {
+    height: 800px;
+    background: url('../images/grandcentral.jpg');
+    background-size: cover;
+      @include mobile {
+        height: 750px;
+        float: left;
+        background: url('../images/europestreet.jpg');
+        background-size: cover;
+        background-position: bottom center;
+      }
+      @include tablet {
+        height: 800px;
+        float: left;
+        background: url('../images/london.jpg');
+        background-size: cover;
+        background-position: bottom center;
+      }
+      @media (min-width: #{$tablet-min}) and (max-width: 735px) {
+        height: 790px;
+      }
+ 
+    h2 {
+      @extend %mainheading;
+      text-shadow: 4px 4px 8px #fff;
+      margin-top: 150px;
+      margin-bottom: 0;
+        span {
+          font-family: $alt-font;
+        }
+      @include mobile {
+        font-size: 35px;
+        color: #fff;
+        text-shadow: 2px 2px $slate;
+      }
+
+    }
+
+    h4 {
+      font-family: $alt-font;
+      font-size: 35px;
+      @include mobile {
+        color: #fff;
+      }
+    }
+
+    .footer-navbar {
+      background-color: $navbar-bg;
+      height: 200px;
+      margin-top: 260px;
+        @include mobile {
+          margin-top: 25%;
+          height: 225px;
+            ul {
+              display: inline;
+              li {
+                display: inline;
+                font-size: 16px;
+              }
+              li:not(:first-child) {
+                  padding-left: 2%;
+                }
+            .foot-div {
+              margin-top: 25px;
+              }
+
+            }
+        }
+
+        img {
+          margin-top: 50px;
+          @include mobile {
+            margin-top: 25px;
+            margin-bottom: 25px;
+          }
+        }
+
+        ul {
+        list-style: none;
+        margin-top: 50px;
+          li:nth-child(1) {
+            font-weight: 900;
+          }
+        }
+    }
+  .copyright {
+    background-color: $slate;
+    height: 75px;
+      @include mobile {
+        height: 90px;
+      }
+
+      h6 {
+        @extend %basefont;
+        color: $navbar-bg;
+        margin-top: 25px;
+        }
+    }
+  }
+
+//DASHBOARD STYLES
+.welcome-info {
+  height: 500px;
+  background: url('../images/louvre.jpg');
+  background-position: bottom center;
+  @include tablet {
+    height: 350px;
+    background-size: cover;
+    background: url('../images/venice.jpeg');
+    background-position: bottom;
+  }
+  @include mobile {
+    height: 300px;
+    background-size: cover;
+    background: url('../images/venice.jpeg');
+    background-position: bottom;
+  }
+  .teacher-info {
+    background-color: $navbar-bg;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    a {
+      float: right;
+      margin-top: 35px;
+      margin-right: 25px;
+      background-color: $green;
+      &:hover{
+        background-color: darken($green, 10%);
+      }
+    }
+    @include tablet {
+      ul {
+        li:nth-child(odd) {
+          display: none;
+        }
+      }
+      a {
+        margin-top: 5px;
+        display: initial;
+      }
+    }
+    @include mobile {
+      ul {
+        display: block;
+        margin-left: 17%;
+        li:nth-child(odd) {
+          display: none;
+        }
+      }
+      a {
+        float: none;
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+  }
+    ul {
+      display: inline;
+      margin-left: 25px;
+      li {
+        display: inline;
+        list-style: none;
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 400;
+        margin-right: 20px;
+      }
+      li:nth-child(2) {
+        font-family: $alt-font;
+        font-size: 45px;
+        @include mobile {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+
+.title-bar {
+  height: 65px;
+  margin-bottom: 15px;
+  background-color: $lightslate;
+  -webkit-box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
+  -moz-box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
+  box-shadow: 0px 5px 24px -2px rgba(74,74,74,1);
+  h3 {
+    font-family: $primary-font;
+    font-size: 30px;
+    padding-top: 5px;
+    color: #fff;
+  }
+}
+
+.open-trips h4 {
+  font-size: 28px;
+}
+
+.chart a {
+  background-color: $purple;
+  margin-left: 20px;
+  @include mobile {
+    display: block;
+  }
+  &:hover{
+    background-color: darken($purple, 10%);
+  }
+}
+
+.chart #fundingTotal {
+  margin-left: -20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  @include mobile {
+
+  }
+}
+
+.donation-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  li:nth-child(1) {
+    font-size: 40px;
+  }
+  li {
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.trip-data ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  span {
+    font-weight: 600;
+  }
+  a {
+    background-color: $blue;
+    margin-top: 10px;
+    &:hover{
+      background-color: darken($blue, 10%);
+    }
+    @include tablet {
+      margin-left: 25px;
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+  li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.recent-trips-header {
+  padding-bottom: 10px;
+  h3 {
+    font-size: 30px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+}
+
+.recent-trips {
+  h4 {
+    font-weight: 300;
+  }
+  a {
+    float: right;
+  }
+}
+
+//CREATE TRIP PAGE STYLES
+.page-bar {
+  background-color: $slate;
+  h2 {
+    font-family: $primary-font;
+    color: #fff;
+    margin-top: 15px;
+  }
+  .save {
+    background-color: $green;
+      &:hover {
+        background-color: darken($green, 10%);
+      }
+  }
+  .preview {
+    background-color: $blue;
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+  }
+}
+
+.trip-input {
+  height: 2400px;
+  fieldset {
+    padding: 5px 20px;
+    legend {
+    font-size: 24px;
+    margin-bottom: 0px;
+    }
+    textarea {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  .photo-bg {
+    background-color: $gray;
+    height: 175px;
+    margin-bottom: 10px;
+    p {
+      text-align: center;
+      padding-top: 75px;
+      color: $slate;
+    } 
+  }
+
+  .trip-photos {
+    textarea {
+      height: 50px;
+    }
+  }
+
+  a {
+      background-color: $purple;
+      &:hover {
+          background-color: darken($purple, 10%);
+        }
+    }
+
+  .save-preview-bottom {
+    height: 150px;
+      a {
+        margin-top: 45px;
+      }
+    .save {
+      background-color: $green;
+        &:hover {
+          background-color: darken($green, 10%);
+        }
+      }
+    .preview {
+      background-color: $blue;
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+    }
+  }
+}
+
+//PREVIEW AND VIEW PAGE STYLES
+.hero-unit {
+  height: 400px;
+  background: url('../images/uscapitol.jpg');
+  background-size: cover;
+  background-position: center center;
+  h2 {
+    font-family: $primary-font;
+    text-align: left;
+    color: $slate;
+    background-color: $navbar-bg;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+.campaign-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h5 {
+    font-size: 24px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  p {
+    font-size: 45px;
+    font-weight: 300;
+    text-align: center;
+  }
+  h6 {
+    font-size: 24px;
+    color: $gray;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.class-photo {
+  height: 230px;
+  box-shadow: 2px 2px 8px $slate;
+  border: 10px solid #fff;
+  background: url('../images/class.jpg');
+  background-size: cover;
+}
+
+.trip-highlights {
+  h3 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  ul {
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.trip-summary {
+
+  .trip-photo-1 {
+          height: 230px;
+          box-shadow: 2px 2px 8px $slate;
+          border: 10px solid #fff;
+          background: url('../images/president.jpg');
+          background-size: cover;
+          background-position: right;
+        }
+  .trip-photo-2 {
+          height: 230px;
+          box-shadow: 2px 2px 8px $slate;
+          border: 10px solid #fff;
+          background: url('../images/congress.jpg');
+          background-size: cover;
+        }
+  h6 {
+    font-size: 14px;
+    font-family: $primary-font;
+  }
+
+  aside {
+    background-color: $slate;
+    height: 775px;
+    color: #fff;
+    @include tablet {
+      height: 690px;
+    }
+    @include mobile {
+      height: 775px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+    h3 {
+      color: #fff;
+      text-align: center;
+      padding-top: 25px;
+    }
+    .donate-cta {
+      ul {
+        list-style: none;
+        font-size: 18px;
+          li:nth-child(2) {
+            font-weight: 300;
+            @include tablet {
+              text-align: center;
+            }
+          }
+          a {
+            display: block;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 24px;
+            background-color: $green;
+            &:hover {
+              background-color: darken($green, 10%);
+            }
+            @include tablet {
+              width: 70%;
+              margin: 5px auto;
+            }
+          }
+
+          li input {
+            max-width: 97%;
+            @include tablet {
+              max-width: 70%;
+              margin: 0 auto;
+            }
+          }
+      .donate-custom .button { 
+          font-size: 20px;
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+  .trip-itinerary {
+    span {
+      font-weight: 700;
+    }
+  }
+
+//LOGIN AND SIGNUP PAGE
+#login-bg {
+  background: url('../images/loginbg.jpg') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.login-box {
+  background-color: $navbar-bg;
+  margin-top: 20%;
+  height: auto;
+
+  h3 {
+    font-family: $alt-font;
+  }
+  img {
+    margin-top: 20px;
+  }
+  a {
+    font-family: $primary-font;
+    background-color: $green;
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+  }
+  .password-forgot a {
+    color: $slate;
+    background-color: transparent;
+  }
+
+  .tabs li a:nth-child(1) {
+    width: 105%;
+  }
+
+}
+
+
+
+
+
+
