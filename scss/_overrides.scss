@@ -166,6 +166,14 @@ footer {
 
     .nav-left {
       margin-top: 35px;
+      a {
+        color: #333;
+        background-color: initial;
+        &:hover {
+          background-color: initial;
+          font-weight: 900;
+        }
+      }
         @include mobile {
           display: none;
         }
@@ -483,6 +491,9 @@ footer {
 /* MAIN - How it Works Call to Action */
   .start {
     height: 450px;
+    .get-started {
+      margin-top: -35px;
+    }
 
     h2 {
       @extend %mainheading;
@@ -522,12 +533,12 @@ footer {
 /* MAIN - Footer and End Hero Section */
   .end-hero {
     height: 800px;
-    background: url('../images/grandcentral.jpeg');
+    background: url('../images/grandcentral.jpg');
     background-size: cover;
       @include mobile {
         height: 750px;
         float: left;
-        background: url('../images/europestreet.jpeg');
+        background: url('../images/europestreet.jpg');
         background-size: cover;
         background-position: bottom center;
       }
@@ -623,7 +634,7 @@ footer {
 //DASHBOARD STYLES
 .welcome-info {
   height: 500px;
-  background: url('../images/louvre.jpeg');
+  background: url('../images/louvre.jpg');
   background-position: bottom center;
   @include tablet {
     height: 350px;
@@ -889,6 +900,8 @@ footer {
     color: $slate;
     background-color: $navbar-bg;
     padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -1030,7 +1043,7 @@ footer {
 
 //LOGIN AND SIGNUP PAGE
 #login-bg {
-  background: url('../images/loginbg.png') no-repeat 50% 50% fixed; 
+  background: url('../images/loginbg.jpg') no-repeat 50% 50% fixed; 
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
